@@ -1,15 +1,25 @@
 // components/Navbar.tsx
+"use client"
+import React from 'react';
 import Link from 'next/link';
 
-const Navbar = () => {
+interface NavbarProps {
+  navbarPosition: string; // Ensure it's named navbarPosition
+}
+
+function Navbar({ navbarPosition }: NavbarProps) {
   let project_link: string = "rsProjects";
   let notes_link: string = "rsNotes";
   let about_link: string = "rsAbout";
   let certs_link: string = "rsCerts";
 
   return (
-    <nav className="bg-green-500 p-2 sticky top-0 z-20">
-      <ul className="flex justify-center space-x-40">
+    <div className="navbar-content">
+        <nav 
+            className="navbar-image bg-no-repeat p-2 sticky top-0 z-20 transition-all duration-2000 ease-in-out"
+            style={{ backgroundPosition: navbarPosition }} // Apply here
+        >
+            <ul className="flex justify-center space-x-40">
         <li>
           <Link 
             href="/" 
@@ -53,6 +63,7 @@ const Navbar = () => {
         </li>
       </ul>
     </nav>
+    </div>
   );
 };
 

@@ -17,9 +17,104 @@
 }
 
 .background-image {
-    background-image: linear-gradient(to right, cyan, orange 40%, black 70%);
+    background-image: linear-gradient(to right, cyan, orange 45%, #141852 73%);
     background-size: 800%; /* This will scale the image 3 times its original size */
     background-position: 0% 0%; /* This will position the image to the top-left */
     background-repeat: no-repeat;
     transition: background-position 1s ease-out;
+}
+
+.navbar-image {
+    background-image: linear-gradient(to right, #48bb78, black 73%);
+    background-size: 800%;
+    background-position: 0% 0%; /* This will position the image to the top-left */
+    background-repeat: no-repeat;
+    transition: background-position 1s ease-out;
+}
+
+.duration-4000 {
+    transition-duration: 4000ms;
+}
+
+.sun {
+    box-shadow: 0 0 30px 10px yellow;
+}
+
+.transition-effect {
+    transition: all 1s ease-in-out;
+}
+
+.navbar-content {
+    position: relative; /* or absolute, based on your layout needs */
+    transition: left 4s ease-in-out; /* Transitioning the left property */
+  }
+
+.element {
+  position: absolute;
+  bottom: -20px;
+}
+
+.moon {
+    width: 75px;  /* Adjust as needed */
+    height: 75px;
+    background-color: gray;  /* Color of the moon */
+    border-radius: 50%;  /* Make it a circle */
+    position: absolute;  /* Set to relative for absolute positioning of pseudo-element */
+    overflow: hidden;  /* Ensures the pseudo-element does not overflow the moon div */
+    box-shadow: 0 0 30px 10px white; 
+  }
+  
+  .moon::before {
+    content: "";  /* Mandatory for the pseudo-element to show */
+    width: 90px;  /* Make this larger than the moon div */
+    height: 90px;
+    background-color: rgba(220, 220, 220, 0.6);  /* Color of the night sky or the background */
+    border-radius: 50%;  /* Make it a circle */
+    position: absolute;  /* Position it absolutely within the moon div */
+    right: 2px;  /* Adjust as needed to control the phase of the moon */
+    top: 30%;
+    transform: translateY(-50%);
+  }
+
+  .crater {
+    position: absolute;
+    background-color: gray;  /* Slightly darker than the moon */
+    border-radius: 50%;
+}
+
+/* Individual crater sizes and positions */
+
+.crater.small {
+    width: 7px;
+    height: 7px;
+    top: 40%;
+    left: 75%;
+}
+
+.crater.medium {
+    width: 6px;
+    height: 12px;
+    top: 50%;
+    left: 10%;
+}
+
+.crater.large {
+    width: 18px;
+    height: 13px;
+    top: 10%;
+    left: 50%;
+}
+
+.crater.xsmall {
+    width: 12px;
+    height: 9px;
+    top: 65%;
+    left: 45%;
+}
+
+.crater.xlarge {
+    width: 21px;
+    height: 21px;
+    top: 20%;
+    left: 20%;
 }

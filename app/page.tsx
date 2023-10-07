@@ -1,15 +1,9 @@
 import Image from 'next/image';
-import Navbar from '../components/Navbar'; 
-import Sun from '../components/Sun';
-import Button from '../components/Button'
-import Night from '../components/Night'
+import SkyButton from '../components/SkyButton'
 
 export default function Home() {
   let role: string = "Research";
   let email: string = "jeff.lee@childrens.harvard.edu"
-
-  {/*Animations*/}
-
 
   return (
     <div className="  bg-blue-100">
@@ -17,41 +11,19 @@ export default function Home() {
       <div className="h-[37vh] flex justify-center">
         <div className="absolute w-full h-[30vh]">
           
-          {/*Background*/}
-          <Night />
+          {/* Transition Button*/}
+          <SkyButton />
 
-          {/*Research/Data Scientist Tag*/ }
-          <span className="absolute bottom-0 left-20
-           text-blue-600 bg-transparent text-5xl text-shadow font-bold">
-            { role } 
-          </span>
-          <span className="absolute bottom-0 left-80
-           text-blue-600 bg-transparent text-5xl text-shadow font-bold">
-            Scientist
-          </span>
-          <span className="absolute top-80 left-96
-           text-blue-600 bg-transparent text-3xl text-shadow font-bold">
-           by day
-          </span>
         </div>
-      </div>
+      </div>     
       
-      {/* Transition Button*/}
-      {/*<Button />*/}
-
-      {/*Sun */}
-      <Sun />
-
-      {/*Naviation Bar*/}
-      <Navbar />
-
-      <div className="absolute top-100">
+      <div className="absolute" style={{ top: '42%' }}>
           {/*Profile Pic*/}
           <div className="absolute top-0 left-0 z-10">
             <Image src="/profile.jpg" objectFit="cover" width="60" height="50" alt="Profile Picture" className="mt-5 ml-4"/>
           </div>
 
-          {/*Info*/}
+          {/*Badge*/}
           {/*Badge-Top*/}
           <div className="mt-3 bg-blue-200 border border-gray-400 p-1 ml-2 pl-4 pr-14 rounded-t-md broder-b-0">
             <p className="relative mt-2 justify-left left-16 text-sm font-bold">
