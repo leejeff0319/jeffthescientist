@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-shadow {
+    text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+.button-hidden {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.button-visible {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.background-image {
+    background-image: linear-gradient(to right, cyan, orange 40%, black 70%);
+    background-size: 800%; /* This will scale the image 3 times its original size */
+    background-position: 0% 0%; /* This will position the image to the top-left */
+    background-repeat: no-repeat;
+    transition: background-position 1s ease-out;
+}
