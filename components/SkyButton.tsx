@@ -1,13 +1,16 @@
 // components/SkyButton.tsx
 "use client";
 import React, { useState } from 'react';
-import { useAnimation } from 'framer-motion';
-import { AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useAnimation } from 'framer-motion';
 import Sun from './Sun';
 import Moon from './Moon'
 import Night from './Night';
 import Scientist from './Scientist';
 import Navbar from './Navbar'
+import RSBadge from './RSBadge';
+import DSBadge from './DSBadge';
+
+
 
 function SkyButton() {
   const [backgroundPosition, setBackgroundPosition] = useState('0% 0%');
@@ -16,7 +19,14 @@ function SkyButton() {
   const moonControls = useAnimation();
   const [role, setRole] = useState("Research");
   const [time, setTime] = useState("by day");
-  
+  const [currentBadge, setCurrentBadge] = useState('RS');
+
+  const badgeVariants = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1, transition: { duration: 1 } },
+    exit: { opacity: 0, transition: { duration: 1 } }
+  };
+
   const setSun = () => {
     // The travel distance as a fraction of viewport width (e.g., if sun needs to travel half the viewport width, fraction will be 0.5)
     const travelFraction = window.innerWidth / (2 * window.innerWidth);
@@ -56,6 +66,8 @@ function SkyButton() {
       });  
   }
 
+  
+
   {/*Animations*/}
   const handleButtonClick = () => {
       setBackgroundPosition('85% 0%');
@@ -65,6 +77,8 @@ function SkyButton() {
       
       setRole(prevRole => prevRole === "Research" ? "Data" : "Research");
       setTime(prevTime => prevTime === "by day" ? "by night" : "by day");
+
+      setCurrentBadge(prevBadge => (prevBadge === 'RS' ? 'DS' : 'RS'));
   };
 
   return (
@@ -77,8 +91,33 @@ function SkyButton() {
             <Scientist role={role} time={time} key={role} />
           </AnimatePresence>
           <Navbar navbarPosition={navbarPosition} />
-           
-           {/* The actual button to trigger animations */}
+          
+          {/* Badge Animations */}
+          <AnimatePresence>
+            {currentBadge === 'RS' ? (
+              <motion.div 
+                 key="RS"  // <-- Add this
+                 initial="initial"
+                 animate="animate"
+                 exit="exit"
+                 variants={badgeVariants}
+              >
+                <RSBadge />
+               </motion.div>
+             ) : (
+              <motion.div 
+                key="DS"  // <-- Add this
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={badgeVariants}
+              >
+                <DSBadge />
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+           {/* Animation Button */}
            <button 
                onClick={handleButtonClick} 
                className="h-20 w-10 fixed top-1/4 right-0 z-50 bg-black text-white p-1 rounded-md text-xs flex items-center justify-center"
