@@ -13,6 +13,11 @@ import DSBadge from './DSBadge';
 
 
 function SkyButton() {
+  const [isActivated, setIsActivated] = useState(false);
+  const [buttonText, setButtonText] = useState("Data Science");
+  const [buttonColor, setButtonColor] = useState("blue-500");
+
+
   const [backgroundPosition, setBackgroundPosition] = useState('0% 0%');
   const [navbarPosition, setNavbarPosition] = useState('0%');
   const sunControls = useAnimation();
@@ -70,6 +75,32 @@ function SkyButton() {
 
   {/*Animations*/}
   const handleButtonClick = () => {
+    if (isActivated) {
+      // Play reverse animations
+      setBackgroundPosition('0% 0%');
+      setNavbarPosition('0%');
+      
+      sunControls.start({
+        x: "0vw",
+        backgroundColor: "#FEF08A", // revert to the original sun color
+        transition: {
+          duration: 1 
+        }
+      });
+      moonControls.start({
+        x: "100vw",
+        transition: {
+          duration: 1 // same as your original duration
+        }
+      });
+      // Set to initial values
+      setRole("Research");
+      setTime("by day");
+      setCurrentBadge('RS');
+      setButtonText("Data Science");
+      setButtonColor("blue-500");
+      setIsActivated(false);
+    } else {
       setBackgroundPosition('85% 0%');
       setNavbarPosition('85%');
       setSun();
@@ -79,6 +110,12 @@ function SkyButton() {
       setTime(prevTime => prevTime === "by day" ? "by night" : "by day");
 
       setCurrentBadge(prevBadge => (prevBadge === 'RS' ? 'DS' : 'RS'));
+
+      setButtonText("Research Science");
+      setButtonColor("black");
+      setIsActivated(true);
+    }
+      
   };
 
   return (
@@ -120,9 +157,9 @@ function SkyButton() {
            {/* Animation Button */}
            <button 
                onClick={handleButtonClick} 
-               className="h-20 w-10 fixed top-1/4 right-0 z-50 bg-black text-white p-1 rounded-md text-xs flex items-center justify-center"
+               className={`h-20 w-10 fixed top-1/4 right-0 z-50 text-white p-1 rounded-md text-xs flex items-center justify-center ${buttonColor === 'blue-500' ? 'bg-blue-500' : 'bg-black'}`}
             >
-               <span className="transform -rotate-90">Data Science</span>
+               <span className="transform -rotate-90">{buttonText}</span>
            </button>
       </div>
     );

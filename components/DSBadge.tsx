@@ -32,10 +32,10 @@ const RSBadge: React.FC = () => {
             {/*Badge-Bottom*/}
             <div className="bg-gray-400 border-gray-500 p-1 ml-2 pl-4 rounded-b-md border-t-0">
                 <p className="text-white font-bold relative justify-left left-7 text-xs">
-                    Boston Children's Hospital
+                    Add Github and stuff
                 </p>
                 <p className="text-white font-thin relative justify-left left-7 text-xxs">
-                    Until every child is well
+                    Kaggle and LinkedIn too
                 </p>
             </div>
         </div>

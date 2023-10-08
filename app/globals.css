@@ -17,7 +17,7 @@
 }
 
 .background-image {
-    background-image: linear-gradient(to right, cyan, orange 45%, #141852 73%);
+    background-image: linear-gradient(to right, #4299e1, orange 45%, #141852 73%);
     background-size: 800%; /* This will scale the image 3 times its original size */
     background-position: 0% 0%; /* This will position the image to the top-left */
     background-repeat: no-repeat;
@@ -119,3 +119,6 @@
     left: 20%;
 }
 
+body {
+    overflow-x: hidden;
+ }
