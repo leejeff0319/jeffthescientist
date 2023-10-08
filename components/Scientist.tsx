@@ -20,7 +20,7 @@ const slideVariants = {
 
 const Scientist: React.FC<ScientistProps> = ({ role, time }) => {
   // Compute left positioning based on word width
-  const leftPosition = role === 'Data' ? '48' : '20'; // Adjust values as needed
+  const roleClass = role === 'Data' ? 'left-48' : 'left-20';
 
   return (
     <>
@@ -31,8 +31,7 @@ const Scientist: React.FC<ScientistProps> = ({ role, time }) => {
         exit="exit"
         variants={slideVariants}
         transition={{ duration: 1 }}
-        className={`absolute bottom-24 left-${leftPosition} text-blue-600 bg-transparent text-5xl text-shadow font-bold`}
-      >
+        className={`absolute bottom-24 ${roleClass} text-blue-600 bg-transparent text-5xl text-shadow font-bold`}>
         {role}
       </motion.span>
       <span className="absolute bottom-24 left-80 text-blue-600 bg-transparent text-5xl text-shadow font-bold">

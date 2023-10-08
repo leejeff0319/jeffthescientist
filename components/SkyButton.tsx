@@ -22,14 +22,16 @@ function SkyButton() {
     const travelFraction = window.innerWidth / (2 * window.innerWidth);
     
     // A constant value for how long it should take the sun to travel the entire width of the viewport.
-    const fullScreenWidthDuration = 3; // 10 seconds to travel full viewport width, adjust as needed
+    const fullScreenWidthDuration = 4; // 10 seconds to travel full viewport width, adjust as needed
+
+    const duration = fullScreenWidthDuration * travelFraction;
 
       sunControls.start({
          
         x: "-50vw",
         backgroundColor: "#F87171", // This is roughly tailwind's orange-600
         transition: {
-          duration: fullScreenWidthDuration
+          duration: duration
       }
     
       });  
@@ -40,13 +42,15 @@ function SkyButton() {
     const travelFraction = window.innerWidth / (2 * window.innerWidth);
     
     // A constant value for how long it should take the sun to travel the entire width of the viewport.
-    const fullScreenWidthDuration = 2; 
+    const fullScreenWidthDuration = 4; 
+
+    const duration = fullScreenWidthDuration * travelFraction;
 
       moonControls.start({
          
         x: "55vw",
         transition: {
-          duration: fullScreenWidthDuration
+          duration: duration
       }
     
       });  
@@ -57,7 +61,7 @@ function SkyButton() {
       setBackgroundPosition('85% 0%');
       setNavbarPosition('85%');
       setSun();
-      setMoon()
+      setMoon();
       
       setRole(prevRole => prevRole === "Research" ? "Data" : "Research");
       setTime(prevTime => prevTime === "by day" ? "by night" : "by day");
