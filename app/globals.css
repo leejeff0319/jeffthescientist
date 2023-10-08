@@ -17,8 +17,17 @@
 }
 
 .background-image {
-    background-image: linear-gradient(to right, #4299e1, orange 45%, #141852 73%);
-    background-size: 800%; /* This will scale the image 3 times its original size */
+    background-image: linear-gradient(to right, #4299e1, orange 45%, #141852 73%), linear-gradient(to right, #48bb78, black 73%);
+    background-size: 800%;  /* This will scale the image 3 times its original size */
+    background-position: 0% 0%; /* This will position the image to the top-left */
+    background-repeat: no-repeat;
+    transition: background-position 1s ease-out;
+    height: calc(300px + 30px);
+}
+
+.grass-image {
+    background-image: linear-gradient(to right, #48bb78, black 73%);
+    background-size: 800%;
     background-position: 0% 0%; /* This will position the image to the top-left */
     background-repeat: no-repeat;
     transition: background-position 1s ease-out;
@@ -122,3 +131,54 @@
 body {
     overflow-x: hidden;
  }
+
+.bg-gray {
+   background-color: gray;
+ }
+  
+/* Counting Stars~ 밤하늘에 퍼어얼~ */
+ .star {
+    width: 2px; /* Adjust as needed */
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.star-fade-in {
+    opacity: 1;
+}
+
+/* Clouds */
+.cloud {
+    width: 100px; /* Adjust as needed */
+    height: 60px; /* Adjust as needed */
+    background-color: white;
+    border-radius: 50px;
+    position: absolute;
+    opacity: 0.8;
+    z-index: 50; /* Ensure clouds are above stars */
+    transition: transform 1s ease-in-out;
+}
+
+.cloud::before, .cloud::after {
+    content: "";
+    width: 50px;
+    height: 40px;
+    background-color: white;
+    border-radius: 30px;
+    position: absolute;
+    top: 10px;
+}
+
+.cloud::before {
+    left: -30px;
+}
+
+.cloud::after {
+    right: -30px;
+}
+
+
