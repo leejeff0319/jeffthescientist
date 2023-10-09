@@ -1,5 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import 'remixicon/fonts/remixicon.css'
+import { RiGithubFill,
+         RiLinkedinBoxFill,
+         RiMailFill } from 'react-icons/ri';
 
 const RSBadge: React.FC = () => {
     return (
@@ -11,7 +16,7 @@ const RSBadge: React.FC = () => {
 
             {/*Badge*/}
             {/*Badge-Top*/}
-            <div className="mt-3 bg-black border border-gray-400 p-1 ml-2 pl-4 pr-24 rounded-t-md broder-b-0">
+            <div className="mt-3 bg-black  p-1 ml-2 pl-4 pr-24 rounded-t-md">
                 <p className="relative mt-2 justify-left left-16 text-sm text-white font-bold">
                     Jeff Youngjae Lee
                 </p>
@@ -25,18 +30,52 @@ const RSBadge: React.FC = () => {
                     leejeff0319@gmail.com
                 </p> 
             </div>
-            <div className="absolute top-20 left-1 z-10">
-                <Image src="/BCHL.png" objectFit="cover" width="25" height="50" alt="BCH Logo" className="mt-6 ml-4"/>
-            </div>
 
             {/*Badge-Bottom*/}
-            <div className="bg-gray-400 border-gray-500 p-1 ml-2 pl-4 rounded-b-md border-t-0">
-                <p className="text-white font-bold relative justify-left left-7 text-xs">
-                    Add Github and stuff
+            <div className="bg-gray-500 p-1 ml-2  pl-4 rounded-b-md">
+                <p className="text-white font-bold relative justify-left text-xs">
                 </p>
-                <p className="text-white font-thin relative justify-left left-7 text-xxs">
-                    Kaggle and LinkedIn too
-                </p>
+                <div className="flex space-x-4 relative justify-center">
+                    {/* Gmail Logo */}
+                    <Link 
+                        href="mailto:leejeff0319@gmail.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:text-gray-300 transition-all duration-300 glow-on-hover"
+                    >
+                        <RiMailFill size={30}/>
+                    </Link>
+
+                    {/* GitHub Logo */}
+                    <Link 
+                        href="https://github.com/leejeff0319" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:text-gray-300 transition-all duration-300 glow-on-hover"
+                    >
+                        <RiGithubFill size={30}/>
+                    </Link>
+        
+                     {/* LinkedIn Logo */}
+                     <Link 
+                        href="https://www.linkedin.com/in/jeff-lee-9b82091a6/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:text-gray-300 transition-all duration-300 glow-on-hover"
+                    >
+                        <RiLinkedinBoxFill size={30}/>
+                    </Link>
+
+                     {/* Kaggle Logo */}
+                     <Link 
+                        href="https://www.kaggle.com/jeffyoungjaelee" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:text-gray-300 transition-all duration-300 glow-on-hover"
+                    >
+                        <img src='KaggleFill-removebg.png' width='30' height='30'/>
+                    </Link>
+                </div>
             </div>
         </div>
     );

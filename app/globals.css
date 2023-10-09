@@ -181,4 +181,11 @@ body {
     right: -30px;
 }
 
+.glow-on-hover {
+    transition: text-shadow 0.3s ease;
+}
+
+.glow-on-hover:hover {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
 
