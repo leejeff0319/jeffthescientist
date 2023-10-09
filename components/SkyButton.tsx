@@ -9,6 +9,9 @@ import Scientist from './Scientist';
 import Navbar from './Navbar'
 import RSBadge from './RSBadge';
 import DSBadge from './DSBadge';
+import Resume from './Resume';
+import DSResume from './DSResume';
+
 
 
 
@@ -26,7 +29,9 @@ function SkyButton() {
   const [role, setRole] = useState("Research");
   const [time, setTime] = useState("by day");
   const [currentBadge, setCurrentBadge] = useState('RS');
-  
+
+
+  const [resumeType, setResumeType] = useState('research');
 
   const badgeVariants = {
     initial: { opacity: 0 },
@@ -96,6 +101,9 @@ function SkyButton() {
       setCurrentBadge('RS');
       setButtonText("Data Science");
       setButtonColor("blue-500");
+      document.body.classList.remove('body-gray-800');
+      document.body.classList.add('body-blue-100');;
+      setResumeType('research');
       setIsActivated(false);
     } 
 
@@ -112,6 +120,10 @@ function SkyButton() {
 
       setButtonText("Research Science");
       setButtonColor("black");
+
+      document.body.classList.remove('body-blue-100');
+      document.body.classList.add('body-gray-800');
+      setResumeType('dataScience');
       setIsActivated(true);
     }
       
@@ -155,6 +167,11 @@ function SkyButton() {
               </motion.div>
             )}
           </AnimatePresence>
+          <div className="grid grid-cols-12 gap-4 mt-10">
+            <div className="col-start-5 col-end-10">
+          {resumeType === 'research' ? <Resume /> : <DSResume />}
+          </div>
+          </div>
 
            {/* Animation Button */}
            <button 
@@ -163,7 +180,7 @@ function SkyButton() {
             >
                <span className="transform -rotate-90">{buttonText}</span>
            </button>
-      </div>
+        </div>
     );
 }
 

@@ -5,7 +5,12 @@ function Resume() {
     const [activeTab, setActiveTab] = useState('education');
 
     const content = {
-        education: 'Your education details go here.',
+        education: (
+            <div className="flex items-center space-x-2">
+                <img src="Gvandy.png" alt="Vanderbilt University" className="w-12 h-8"/>
+                <span><strong>Vanderbilt University</strong>- B.S. Chemistry</span>
+            </div>
+        ),
         research: 'Your research details go here.',
         clinical: 'Your clinical details go here.',
         leadership: 'Your leadership details go here.'
