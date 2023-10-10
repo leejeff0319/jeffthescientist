@@ -12,3 +12,15 @@ module.exports = {
         return config
     },
 }
+
+module.exports = {
+    theme: {
+      extend: {
+        fontSize: {
+          '2xs': '0.625rem', // This is 10px. Adjust if necessary.
+        },
+      },
+    },
+    variants: {},
+    plugins: [],
+  }

@@ -168,7 +168,7 @@ function SkyButton() {
             )}
           </AnimatePresence>
           <div className="grid grid-cols-12 gap-4 mt-10">
-            <div className="col-start-5 col-end-10">
+            <div className="col-start-4 col-end-10">
           {resumeType === 'research' ? <Resume /> : <DSResume />}
           </div>
           </div>

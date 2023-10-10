@@ -8,7 +8,7 @@ import { RiGithubFill,
 
 const RSBadge: React.FC = () => {
     return (
-        <div className="absolute" style={{ top: '74%' }}>
+        <div className="absolute top-100">
             {/*Profile Pic*/}
             <div className="absolute top-0 left-0 z-10">
                 <Image src="/profile.jpg" objectFit="cover" width="60" height="50" alt="Profile Picture" className="mt-5 ml-4"/>
