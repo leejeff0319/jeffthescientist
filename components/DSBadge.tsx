@@ -4,7 +4,8 @@ import Link from 'next/link';
 import 'remixicon/fonts/remixicon.css'
 import { RiGithubFill,
          RiLinkedinBoxFill,
-         RiMailFill } from 'react-icons/ri';
+         RiMailFill} from 'react-icons/ri';
+import {FaKaggle} from 'react-icons/fa';
 
 const RSBadge: React.FC = () => {
     return (
@@ -73,7 +74,7 @@ const RSBadge: React.FC = () => {
                         rel="noopener noreferrer"
                         className="hover:text-gray-300 transition-all duration-300 glow-on-hover"
                     >
-                        <img src='KaggleFill-removebg.png' width='30' height='30'/>
+                        <FaKaggle size={25}/>
                     </Link>
                 </div>
             </div>

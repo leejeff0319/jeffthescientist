@@ -18,14 +18,15 @@ function Resume() {
                         <li>Co-founded <strong>CUPPS.org</strong></li>
                         <li>Co-directed the <strong>“I’m Good, How Are You”</strong> Podcast</li> 
                         <li>Elected <strong>Pledge Class President </strong>of Alpha Phi Omega</li>
-                        <li><strong>3.78 GPA</strong> during the final 3 Semesters</li>
+                        <li><strong>3.78 GPA</strong> during the final 3 Semesters while taking 18 credit hours and working 20+ hours/week</li>
                 </ul>
             </div>
             ),
+
         research: (
             <div>
                 <div className="flex justify-between mb-2 ">
-                    <strong className="text-md">Research Assistant- Dr. Zhongjie Fu's Ophthalmology Lab</strong>
+                    <span className="text-md"><strong>Research Assistant</strong>- Dr. Zhongjie Fu's Ophthalmology Lab</span>
                     <span className="text-sm">06/2023 - Present</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
@@ -33,7 +34,7 @@ function Resume() {
                     <li>Forefront of Ophthalmology research for Retinopathy of Prematurity and Age-related Macular Degeneration </li>
                 </ul>
                 <div className="flex justify-between mb-2">
-                    <strong className="text-md">Research Assistant- Dr. Michael P. Stone’s Biophysical Chemistry Lab</strong>
+                <span className="text-md"><strong>Research Assistant</strong>- Dr. Michael P. Stone’s Biophysical Chemistry Lab</span>
                     <span className="text-sm">08/2021 - 05/2023</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
@@ -43,7 +44,7 @@ function Resume() {
                 </ul>
         
                 <div className="flex justify-between mb-2 ">
-                    <strong className="text-md">Research Assistant- Dr. John A. McLean’s Mass Spectrometry Lab</strong>
+                <span className="text-md"><strong>Research Assistant</strong>- Dr. John A. McLean’s Mass Spectrometry Lab</span>
                     <span className="text-sm">01/2023 - 05/2023</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
@@ -62,15 +63,94 @@ function Resume() {
                 </ul>
 
                 <div className="flex justify-between mb-2 ">
-                    <strong className="text-md">Research Assistant- Dr. Jessika C. Boles’s Pyschology Lab</strong>
+                <span className="text-md"><strong>Research Assistant</strong>- Dr. Jessika C. Boles’s Pyschology Lab</span>
                     <span className="text-sm">02/2023 - Present</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
                     <li>Conducting a study on the general medical practitioners’ knowledge on mental health resources that are available for patients</li>
                 </ul>
-            </div>),
-        clinical: 'Your clinical details go here.',
-        leadership: 'Your leadership details go here.'
+            </div>
+        ),
+
+        clinical: (
+            <div>
+                <div className="flex justify-between mb-2 ">
+                    <span className="text-md"><strong>Vanderbilt University Medical Center</strong>- Mobility Technician</span>
+                    <span className="text-sm">02/2023 - Present</span>
+                </div>
+                <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
+                    <li>Joined the VUMC Ortho/Spine medical team and aided in the recovery process of Ortho/Spine patients who underwent recent surgeries</li>
+                    <li>Cooperated with nurses and care partners to provide the most pleasant stay possible for patients</li>
+                </ul>
+
+                <div className="flex justify-between mb-2 ">
+                <span className="text-md"><strong>Next Steps</strong>- Ambassador</span>
+                    <span className="text-sm">02/2022 - 05/2023</span>
+                </div>
+                <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
+                    <li>Helped students with learning disabilities assimilate into the college environment </li>
+                    <li>Provided these students with an inclusive, transformational postsecondary education in academics, social and career development, and independent living while honoring equality, compassion, and excellence in all endeavors</li>
+                </ul>
+
+                <div className="flex justify-between mb-2 ">
+                <span className="text-md"><strong>Vanderbilt Premedical Society</strong>- Spring Break Service Trip</span>
+                    <span className="text-sm">03/05/2022- 03/12/2022</span>
+                </div>
+                <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
+                    <li>Partnered with International Volunteer HQ (IVHQ) and Maximo Nivel Guatemala, to provide clinical volunteering in five rural villages of Guatemala</li>
+                    <li>Set up clinics with two local physicians of internal medicine to provide free clinics in parts of the country where medical care is out of reach. </li>
+                </ul>
+
+                <div className="flex justify-between mb-2 ">
+                    <strong className="text-md">Licenced Emergency Medical Technician</strong>
+                    <span className="text-sm">Since 08/2022</span>
+                </div>
+                <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
+                    <li><strong>NREMT</strong>-certified and licensed in the states of California & Tennessee</li>
+                </ul>
+            </div>
+        ),
+
+        leadership:(
+            <div>
+                <div className="flex justify-between mb-2 ">
+                    <span className="text-md"><strong>Special Operations Ambassador</strong>- ScribeAmerica</span>
+                    <span className="text-sm">06/2022 - 06/2023</span>
+                </div>
+                <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
+                    <li>Led ScribeAmerica 3 implementation projects at new sites, communicating effectively in between the physicians at new sites and members of my team to ensure the highest quality experiences for both parties</li>
+                    <li>Coached, mentored, evaluated, and provided feedback to candidates as they progressed through the training program</li>
+                    <li>Utilized appropriate medical terminologies to create a personalized chart for each patient. Recognized for my abilities and was offered two promotions within just 6 months of working. </li>
+                    <li>Familiar with Epic, Athena, Docutap, SpekeNotes</li>
+                </ul>
+
+                <div className="flex justify-between mb-2 ">
+                    <span className="text-md"><strong>“I’m Good, How Are You?” Podcast</strong>- Co-director</span>
+                    <span className="text-sm">09/2022 - Present</span>
+                </div>
+                <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
+                    <li>Started in hopes of raising the importance of mental health amongst college students and the general public</li>
+                    <li>Interviewed Vanderbilt University Psychology Professors <strong>Dr. Balch, Dr. Boles, Dr. Hollon, and Dr. Olatunji</strong> to provide our audience with informative and entertaining knowledge about topics surrounding mental health </li>
+                </ul>
+
+                <div className="flex justify-between mb-2 ">
+                    <span className="text-md"><strong>CUPPS.org</strong>- Co-founder</span>
+                    <span className="text-sm">01/2022 - Present</span>
+                </div>
+                <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
+                    <li>Provided help to pre-med and high school students from underserved communities by providing free tutoring and information sessions</li>
+                </ul>
+
+                <div className="flex justify-between mb-2 ">
+                    <span className="text-md"><strong>Alpha Phi Omega</strong>- Pledge Class President</span>
+                    <span className="text-sm">10/2022- 05/2023</span>
+                </div>
+                <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
+                    <li>Dedicated hundreds of hours to serving the fraternity, campus, community, and nation</li>
+                    <li>Served my pledge class as the elected Pledge Class President by working alongside the other board members to coordinate service opportunities & bonding events for the pledges and brothers of the fraternity</li>
+                </ul>
+            </div>
+        )
     };
 
     return (
