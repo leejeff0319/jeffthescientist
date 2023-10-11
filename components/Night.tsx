@@ -32,11 +32,11 @@ function Night({ backgroundPosition }: NightProps) {
       <div className="bg-blue-100 h-[37vh] flex justify-center">
           <div className="absolute w-full h-[30vh]">
               <div 
-                  className="background-image bg-no-repeat h-[40vh] transition-all duration-2000 ease-in-out" 
+                  className="background-image bg-no-repeat h-[40vh] transition-all duration-3000 ease-in-out" 
                   style={{ backgroundPosition: backgroundPosition }}
               />
               <div 
-                  className="grass-image bg-no-repeat h-[8vh] transition-all duration-2000 ease-in-out" 
+                  className="grass-image bg-no-repeat h-[8vh] transition-all duration-3000 ease-in-out" 
                   style={{ backgroundPosition: backgroundPosition }}
               />
               {stars}

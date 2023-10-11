@@ -48,7 +48,7 @@ function SkyButton() {
     const duration = fullScreenWidthDuration * travelFraction;
 
       sunControls.start({
-        x: "-50vw",
+        x: "-30vw",
         backgroundColor: "#F87171", // This is roughly tailwind's orange-600
         transition: {
           duration: duration

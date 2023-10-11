@@ -42,7 +42,7 @@ const RSBadge: React.FC = () => {
                         href="mailto:leejeff0319@gmail.com" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="hover:text-gray-300 transition-all duration-300 glow-on-hover"
+                        className="hover:text-gray-300 transition-all duration-300 glow-on-hover "
                     >
                         <RiMailFill size={30}/>
                     </Link>
