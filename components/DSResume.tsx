@@ -7,7 +7,8 @@ import {
     RiBootstrapLine,
     RiHtml5Fill,
 } from 'react-icons/ri';
-import { BiLogoTailwindCss } from 'react-icons/bi';
+import { BiLogoTailwindCss,
+        BiGitBranch } from 'react-icons/bi';
 import { TbBrandNextjs } from 'react-icons/tb';
 import { DiNodejsSmall } from 'react-icons/di';
 import {
@@ -156,6 +157,10 @@ function DSResume() {
                     <div className="mb-2">
                         <span className="block text-left font-bold">Others</span>
                         <div className="flex space-x-4 justify-center">
+                        <div className="flex flex-col items-center text-s">
+                                <BiGitBranch size={iconsSize} className="glow-icon-on-hover"  />
+                                VC/Git
+                            </div>
                             <div className="flex flex-col items-center text-s">
                                 <SiTableau size={iconsSize} className="glow-icon-on-hover"  />
                                 Tableau

@@ -30,16 +30,16 @@ function Resume() {
                     <span className="text-sm">06/2023 - Present</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
-                    <li>Boston Children's Hospital working under Dr. Zhongjie Fu and Dr. Lois Smith</li>
-                    <li>Forefront of Ophthalmology research for Retinopathy of Prematurity and Age-related Macular Degeneration </li>
+                    <li>Boston Children's Hospital working under <strong>Dr. Zhongjie Fu</strong> and <strong>Dr. Lois Smith</strong></li>
+                    <li>Forefront of Ophthalmology research for <strong>Retinopathy of Prematurity</strong> and Age-related Macular Degeneration </li>
                 </ul>
                 <div className="flex justify-between mb-2">
                 <span className="text-md"><strong>Research Assistant</strong>- Dr. Michael P. Stone’s Biophysical Chemistry Lab</span>
                     <span className="text-sm">08/2021 - 05/2023</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
-                    <li>Researched effects of DNA adducts and their correlations to carcinogenesis</li>
-                    <li>Studied the possibly detrimental effects of anthracycline drug adducts on the human body</li>
+                    <li>Researched effects of <strong>DNA adducts</strong> and their correlations to <strong>carcinogenesis</strong></li>
+                    <li>Studied the possibly detrimental effects of <strong>anthracycline drug adducts</strong> on the human body</li>
                     <li>Utilized techniques such as UV-Vis, NanoDrop, Reverse-phase HPLC, Mass Spec, cell culture, COSY/NOESY 2D NMR software, NMR, and X-ray Crystallography</li>
                 </ul>
         
@@ -48,7 +48,7 @@ function Resume() {
                     <span className="text-sm">01/2023 - 05/2023</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
-                    <li>Researched non-commercial cyclic crown ethers and their guest-host capabilities compared to cyclodextrins</li>
+                    <li>Researched non-commercial <strong>cyclic crown ethers</strong> for their <strong>guest-host capabilities</strong> compared to cyclodextrins</li>
                     <li>Operated Drift Tube Ion Mobility Spectrometry (DTIMS) to verify the identity of our analytes using 3 levels of confidence (m/z, CCS, EC50)</li>
                     <li>Analyze data, constructed breakdown curves to expand the CCS trendlines and selectivity information beyond the crown ethers available as commercial standards</li>
                 </ul>
@@ -58,7 +58,7 @@ function Resume() {
                     <span className="text-sm">08/2022 - 05/2023</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
-                    <li>Presented weekly on self-conducted research projects of well-known studies including Synthesis & Characterization of Au Nanoparticles, Ru Bpy Complexes, Urea, and Lacto-N-Tetraose</li>
+                    <li><strong>Presented self-conducted research projects weekly</strong> consisting of well-known studies including Synthesis & Characterization of Au Nanoparticles, Ru Bpy Complexes, Urea, and Lacto-N-Tetraose</li>
                     <li>Extensively utilized Raman Spectrometry, HPLC, UV-Vis, NMR, TEM, STA (TGA & DSC), Cyclic Voltammetry, Rotovap, IR Spectrometry, Fractional Distillation, TopSpin, R, and Linux</li>
                 </ul>
 
@@ -67,7 +67,7 @@ function Resume() {
                     <span className="text-sm">02/2023 - Present</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
-                    <li>Conducting a study on the general medical practitioners’ knowledge on mental health resources that are available for patients</li>
+                    <li>Conducting a study on the general medical practitioners’ knowledge on <strong>mental health resources that are available for patients</strong></li>
                 </ul>
             </div>
         ),
@@ -79,8 +79,8 @@ function Resume() {
                     <span className="text-sm">02/2023 - Present</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
-                    <li>Joined the VUMC Ortho/Spine medical team and aided in the recovery process of Ortho/Spine patients who underwent recent surgeries</li>
-                    <li>Cooperated with nurses and care partners to provide the most pleasant stay possible for patients</li>
+                    <li>Joined the VUMC Ortho/Spine medical team and <strong>aided in the recovery process</strong> of Ortho/Spine patients who recently underwent surgeries</li>
+                    <li><strong>Worked alongside nurses and care partners</strong> to provide the most pleasant stay possible for patients</li>
                 </ul>
 
                 <div className="flex justify-between mb-2 ">
@@ -88,8 +88,8 @@ function Resume() {
                     <span className="text-sm">02/2022 - 05/2023</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
-                    <li>Helped students with learning disabilities assimilate into the college environment </li>
-                    <li>Provided these students with an inclusive, transformational postsecondary education in academics, social and career development, and independent living while honoring equality, compassion, and excellence in all endeavors</li>
+                    <li>Helped ease the experience faced by students with learning disabilities as they <strong>assimilated into the college environment</strong> </li>
+                    <li>Provided these students with an <strong>inclusive, transformational</strong> postsecondary education in academics, social and career development, and independent living while honoring <strong>equality, compassion,</strong> and <strong>excellence</strong> in all endeavors</li>
                 </ul>
 
                 <div className="flex justify-between mb-2 ">
@@ -97,8 +97,8 @@ function Resume() {
                     <span className="text-sm">03/05/2022- 03/12/2022</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
-                    <li>Partnered with International Volunteer HQ (IVHQ) and Maximo Nivel Guatemala, to provide clinical volunteering in five rural villages of Guatemala</li>
-                    <li>Set up clinics with two local physicians of internal medicine to provide free clinics in parts of the country where medical care is out of reach. </li>
+                    <li>Partnered with International Volunteer HQ (IVHQ) and Maximo Nivel Guatemala, to <strong>provide clinical volunteering</strong> in five rural villages of Guatemala</li>
+                    <li><strong>Set up free health clinics</strong> with two local physicians of internal medicine in parts of the country where medical care is out of reach. </li>
                 </ul>
 
                 <div className="flex justify-between mb-2 ">
@@ -118,9 +118,9 @@ function Resume() {
                     <span className="text-sm">06/2022 - 06/2023</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
-                    <li>Led ScribeAmerica 3 implementation projects at new sites, communicating effectively in between the physicians at new sites and members of my team to ensure the highest quality experiences for both parties</li>
-                    <li>Coached, mentored, evaluated, and provided feedback to candidates as they progressed through the training program</li>
-                    <li>Utilized appropriate medical terminologies to create a personalized chart for each patient. Recognized for my abilities and was offered two promotions within just 6 months of working. </li>
+                    <li><strong>Led ScribeAmerica 3 implementation projects</strong> at new sites, communicating effectively in between the physicians at new sites and members of my team to ensure the highest quality experiences for both parties</li>
+                    <li><strong>Coached, mentored,</strong> evaluated, and provided feedback to candidates as they progressed through the training program</li>
+                    <li>Utilized appropriate medical terminologies to create a <strong>personalized chart</strong> for each patient. Recognized for my abilities and was <strong>offered 2 promotions within just 6 months</strong> of starting. </li>
                     <li>Familiar with Epic, Athena, Docutap, SpekeNotes</li>
                 </ul>
 
@@ -129,7 +129,7 @@ function Resume() {
                     <span className="text-sm">09/2022 - Present</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
-                    <li>Started in hopes of raising the importance of mental health amongst college students and the general public</li>
+                    <li>Started in hopes of <strong>raising the importance of mental health</strong> amongst college students and the general public</li>
                     <li>Interviewed Vanderbilt University Psychology Professors <strong>Dr. Balch, Dr. Boles, Dr. Hollon, and Dr. Olatunji</strong> to provide our audience with informative and entertaining knowledge about topics surrounding mental health </li>
                 </ul>
 
@@ -138,7 +138,7 @@ function Resume() {
                     <span className="text-sm">01/2022 - Present</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
-                    <li>Provided help to pre-med and high school students from underserved communities by providing free tutoring and information sessions</li>
+                    <li>Provided help to pre-med and high school students from <strong>underserved communities</strong> by providing free tutoring and information sessions</li>
                 </ul>
 
                 <div className="flex justify-between mb-2 ">
@@ -146,8 +146,7 @@ function Resume() {
                     <span className="text-sm">10/2022- 05/2023</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xs sm:text-xs md:text-sm lg:text-base">
-                    <li>Dedicated hundreds of hours to serving the fraternity, campus, community, and nation</li>
-                    <li>Served my pledge class as the elected Pledge Class President by working alongside the other board members to coordinate service opportunities & bonding events for the pledges and brothers of the fraternity</li>
+                    <li>Served my pledge class as the <strong>elected Pledge Class President</strong> by working alongside the other board members to <strong>coordinate service opportunities & bonding events</strong> for the pledges and brothers of the fraternity</li>
                 </ul>
             </div>
         )
