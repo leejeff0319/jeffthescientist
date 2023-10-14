@@ -12,6 +12,7 @@ import Resume from '../components//Resume';
 import DSResume from '../components//DSResume';
 import RSHours from '@/components/RSHours';
 import DSHours from '@/components/DSHours';
+import ContactFooter from '@/components/ContactFooter';
 
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
   const [currentBadge, setCurrentBadge] = useState('RS');
   const [resumeType, setResumeType] = useState('research');
   const [showRS, setShowRS] = useState(true);
+
   const badgeVariants = {
     initial: { opacity: 0 },
     animate: { opacity: 1, transition: { duration: 1 } },
@@ -95,6 +97,8 @@ export default function Home() {
       document.body.classList.add('body-blue-100');;
       setResumeType('research');
       setShowRS(true);
+    
+
       setIsActivated(false);
     }
 
@@ -116,6 +120,8 @@ export default function Home() {
       document.body.classList.add('body-gray-800');
       setResumeType('dataScience');
       setShowRS(false);
+    
+
       setIsActivated(true);
     }
 
@@ -170,6 +176,9 @@ export default function Home() {
             </div>
 
             {showRS ? <RSHours /> : <DSHours />}
+            <ContactFooter isDark={isActivated} />
+
+         
 
             {/* Animation Button */}
             <button

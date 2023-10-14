@@ -8,7 +8,7 @@ import { MdOutlineBedtimeOff } from 'react-icons/md';
 
 const RSHours = () => {
     return (
-        <div className="flex w-full mt-10  bg-gray-100 py-16 justify-center">  {/* Adjust styles as needed */}
+        <div className="flex w-full mt-10  bg-blue-100 py-16 justify-center">  {/* Adjust styles as needed */}
                 <div className="grid md:grid-cols-4 grid-cols-1 gap-4 items-center w-3/4 m-auto">
                     {/* Research Hours */}
                     <div className="   md:w-1/4 mx-auto">
