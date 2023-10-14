@@ -10,6 +10,8 @@ import RSBadge from '../components//RSBadge';
 import DSBadge from '../components//DSBadge';
 import Resume from '../components//Resume';
 import DSResume from '../components//DSResume';
+import RSHours from '@/components/RSHours';
+import DSHours from '@/components/DSHours';
 
 
 export default function Home() {
@@ -24,6 +26,7 @@ export default function Home() {
   const [time, setTime] = useState("by day");
   const [currentBadge, setCurrentBadge] = useState('RS');
   const [resumeType, setResumeType] = useState('research');
+  const [showRS, setShowRS] = useState(true);
   const badgeVariants = {
     initial: { opacity: 0 },
     animate: { opacity: 1, transition: { duration: 1 } },
@@ -91,6 +94,7 @@ export default function Home() {
       document.body.classList.remove('body-gray-800');
       document.body.classList.add('body-blue-100');;
       setResumeType('research');
+      setShowRS(true);
       setIsActivated(false);
     }
 
@@ -111,6 +115,7 @@ export default function Home() {
       document.body.classList.remove('body-blue-100');
       document.body.classList.add('body-gray-800');
       setResumeType('dataScience');
+      setShowRS(false);
       setIsActivated(true);
     }
 
@@ -164,6 +169,8 @@ export default function Home() {
               </div>
             </div>
 
+            {showRS ? <RSHours /> : <DSHours />}
+
             {/* Animation Button */}
             <button
               onClick={handleButtonClick}
@@ -171,7 +178,7 @@ export default function Home() {
             >
               <span className="transform -rotate-90">{buttonText}</span>
             </button>
-            
+
           </div>
         </div>
       </div>

@@ -196,7 +196,7 @@ body {
 }
 
 .body-gray-800 {
-    background-color: #2d3748; 
+    background-color: #181A1B; 
 }
 
 .glow-icon-on-hover {
@@ -216,3 +216,4 @@ body {
 .growButton:hover {
     transform: scale(1.1);
 }
+
