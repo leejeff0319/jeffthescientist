@@ -18,8 +18,10 @@
 
 .background-image {
     background-image: linear-gradient(to right, #4299e1, orange 45%, #141852 73%), linear-gradient(to right, #48bb78, black 73%);
-    background-size: 800%;  /* This will scale the image 3 times its original size */
-    background-position: 0% 0%; /* This will position the image to the top-left */
+    background-size: 800%;
+    /* This will scale the image 3 times its original size */
+    background-position: 0% 0%;
+    /* This will position the image to the top-left */
     background-repeat: no-repeat;
     transition: background-position 1s ease-out;
     height: calc(300px + 30px);
@@ -28,7 +30,8 @@
 .grass-image {
     background-image: linear-gradient(to right, #48bb78, black 73%);
     background-size: 800%;
-    background-position: 0% 0%; /* This will position the image to the top-left */
+    background-position: 0% 0%;
+    /* This will position the image to the top-left */
     background-repeat: no-repeat;
     transition: background-position 1s ease-out;
 }
@@ -36,7 +39,8 @@
 .navbar-image {
     background-image: linear-gradient(to right, #48bb78, black 73%);
     background-size: 800%;
-    background-position: 0% 0%; /* This will position the image to the top-left */
+    background-position: 0% 0%;
+    /* This will position the image to the top-left */
     background-repeat: no-repeat;
     transition: background-position 1s ease-out;
 }
@@ -54,40 +58,59 @@
 }
 
 .navbar-content {
-    position: relative; /* or absolute, based on your layout needs */
-    transition: left 4s ease-in-out; /* Transitioning the left property */
-  }
+    position: relative;
+    /* or absolute, based on your layout needs */
+    transition: left 4s ease-in-out;
+    /* Transitioning the left property */
+}
+
+.navbar-pages{
+    position: relative;
+    /* ADD SHADOW */
+}
 
 .element {
-  position: absolute;
-  bottom: -20px;
+    position: absolute;
+    bottom: -20px;
 }
 
 .moon {
-    width: 75px;  /* Adjust as needed */
+    width: 75px;
+    /* Adjust as needed */
     height: 75px;
-    background-color: gray;  /* Color of the moon */
-    border-radius: 50%;  /* Make it a circle */
-    position: absolute;  /* Set to relative for absolute positioning of pseudo-element */
-    overflow: hidden;  /* Ensures the pseudo-element does not overflow the moon div */
-    box-shadow: 0 0 30px 10px white; 
-  }
-  
-  .moon::before {
-    content: "";  /* Mandatory for the pseudo-element to show */
-    width: 90px;  /* Make this larger than the moon div */
+    background-color: gray;
+    /* Color of the moon */
+    border-radius: 50%;
+    /* Make it a circle */
+    position: absolute;
+    /* Set to relative for absolute positioning of pseudo-element */
+    overflow: hidden;
+    /* Ensures the pseudo-element does not overflow the moon div */
+    box-shadow: 0 0 30px 10px white;
+}
+
+.moon::before {
+    content: "";
+    /* Mandatory for the pseudo-element to show */
+    width: 90px;
+    /* Make this larger than the moon div */
     height: 90px;
-    background-color: rgba(220, 220, 220, 0.6);  /* Color of the night sky or the background */
-    border-radius: 50%;  /* Make it a circle */
-    position: absolute;  /* Position it absolutely within the moon div */
-    right: 2px;  /* Adjust as needed to control the phase of the moon */
+    background-color: rgba(220, 220, 220, 0.6);
+    /* Color of the night sky or the background */
+    border-radius: 50%;
+    /* Make it a circle */
+    position: absolute;
+    /* Position it absolutely within the moon div */
+    right: 2px;
+    /* Adjust as needed to control the phase of the moon */
     top: 30%;
     transform: translateY(-50%);
-  }
+}
 
-  .crater {
+.crater {
     position: absolute;
-    background-color: gray;  /* Slightly darker than the moon */
+    background-color: gray;
+    /* Slightly darker than the moon */
     border-radius: 50%;
 }
 
@@ -130,15 +153,48 @@
 
 body {
     overflow-x: hidden;
- }
+    transition: background-color 1s ease;
+}
 
 .bg-gray {
-   background-color: gray;
- }
-  
+    background-color: #2C2F31;
+}
+
+.day-btn {
+    background-color: #ADD8E6;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font: 400 16px 'Signika', sans-serif;
+    color: #008bfd;
+    box-shadow: 0 8px 6px -6px #555;
+    transition: all .4s ease;
+    
+}
+
+.day-btn:hover {
+    letter-spacing: 2px;
+    box-shadow: none;
+}
+
+.night-btn {
+    background-color: #2C2F31;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font: 400 16px 'Signika', sans-serif;
+    color: #4299e1;
+    box-shadow: 0 8px 6px -6px black;
+    transition: all .4s ease;
+}
+
+.night-btn:hover {
+    letter-spacing: 2px;
+    box-shadow: none;
+}
+
 /* Counting Stars~ 밤하늘에 퍼어얼~ */
- .star {
-    width: 2px; /* Adjust as needed */
+.star {
+    width: 2px;
+    /* Adjust as needed */
     height: 2px;
     background-color: white;
     border-radius: 50%;
@@ -153,17 +209,21 @@ body {
 
 /* Clouds */
 .cloud {
-    width: 100px; /* Adjust as needed */
-    height: 60px; /* Adjust as needed */
+    width: 100px;
+    /* Adjust as needed */
+    height: 60px;
+    /* Adjust as needed */
     background-color: white;
     border-radius: 50px;
     position: absolute;
     opacity: 0.8;
-    z-index: 50; /* Ensure clouds are above stars */
+    z-index: 50;
+    /* Ensure clouds are above stars */
     transition: transform 1s ease-in-out;
 }
 
-.cloud::before, .cloud::after {
+.cloud::before,
+.cloud::after {
     content: "";
     width: 50px;
     height: 40px;
@@ -196,7 +256,7 @@ body {
 }
 
 .body-gray-800 {
-    background-color: #181A1B; 
+    background-color: #181A1B;
 }
 
 .glow-icon-on-hover {
@@ -217,3 +277,103 @@ body {
     transform: scale(1.1);
 }
 
+/* Hero Images */
+:root {
+    --timing: 400ms;
+    --rotation: 20deg;
+  }
+
+.hero {
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: rotate var(--timing) ease;
+}
+
+.hero:hover {
+    rotate: x var(--rotation);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    /* background-image: radial-gradient(circle, transparent 150px, black); */
+    opacity: 0;
+    transition: opacity 400ms;
+}
+
+.hero:hover::before {
+    opacity: 1;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 80% 0.5rem 0.5rem;
+    translate: 0;
+    transform: translateZ(-100px);
+    /* background: black; */
+    filter: blur(1rem);
+    z-index: 1;
+    transition: rotate var(--timing), translate var(--timing);
+  }
+  
+
+.hero>* {
+    position: relative;
+    /* opacity: 0; */
+}
+
+.front-image {
+    scale: 0.65;
+    transform-origin: bottom;
+    opacity: 1;
+    z-index: 100;
+    transition: var(--timing);
+    
+}
+
+.sectionName,
+.front-image {
+  position: absolute;
+}
+
+
+.sectionName {
+  z-index: 1000;
+  filter: invert(1);
+  width: 65%;
+  margin-inline: auto;
+  inset: auto 0 2rem;
+  transform: translateY(0rem) translateZ(20px);
+  transition: var(--timing);
+}
+
+.hero:hover .sectionName {
+  transform: translateY(-2rem) translateZ(20px);
+  rotate: x calc(var(--rotation) * -1);
+}
+
+.hero:hover .front-image {
+    scale: 0.70;
+    opacity: 1;
+    transform: translateY(2rem) translateZ(-10px);
+    rotate: x calc(var(--rotation) * -1);
+}
+
+.bg-certs {
+    position: absolute;
+    z-index: 10;
+    height: 100%;
+    object-fit: cover;
+}
+
+.move-up {
+    margin-top: -200px; /* Adjust this value as needed */
+}
+
+.move-down {
+    margin-top: 375px; /* Adjust this value as needed */
+}

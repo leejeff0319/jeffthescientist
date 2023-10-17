@@ -28,11 +28,13 @@ export default function Home() {
   const [currentBadge, setCurrentBadge] = useState('RS');
   const [resumeType, setResumeType] = useState('research');
   const [showRS, setShowRS] = useState(true);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+  const buttonClass = isActivated ? 'night-btn' : 'day-btn';
 
-  const badgeVariants = {
+  const fadeVariants = {
     initial: { opacity: 0 },
-    animate: { opacity: 1, transition: { duration: 1 } },
-    exit: { opacity: 0, transition: { duration: 1 } }
+    animate: { opacity: 1, transition: { duration: 0.5 } },
+    exit: { opacity: 0, transition: { duration: 0.5 } }
   };
   const setSun = () => {
     // The travel distance as a fraction of viewport width (e.g., if sun needs to travel half the viewport width, fraction will be 0.5)
@@ -68,6 +70,8 @@ export default function Home() {
 
   {/*Animations*/ }
   const handleButtonClick = () => {
+    setIsButtonDisabled(true);
+
     if (isActivated) {
       // Play reverse animations
       setBackgroundPosition('0% 0%');
@@ -97,7 +101,6 @@ export default function Home() {
       document.body.classList.add('body-blue-100');;
       setResumeType('research');
       setShowRS(true);
-    
 
       setIsActivated(false);
     }
@@ -120,11 +123,12 @@ export default function Home() {
       document.body.classList.add('body-gray-800');
       setResumeType('dataScience');
       setShowRS(false);
-    
 
       setIsActivated(true);
     }
-
+    setTimeout(() => {
+      setIsButtonDisabled(false);
+    }, 1000);
   };
 
   return (
@@ -145,6 +149,7 @@ export default function Home() {
               <Scientist role={role} time={time} key={role} />
             </AnimatePresence>
 
+
             {/* Badge Animations */}
             <AnimatePresence>
               {currentBadge === 'RS' ? (
@@ -153,7 +158,7 @@ export default function Home() {
                   initial="initial"
                   animate="animate"
                   exit="exit"
-                  variants={badgeVariants}
+                  variants={fadeVariants}
                 >
                   <RSBadge />
                 </motion.div>
@@ -163,26 +168,85 @@ export default function Home() {
                   initial="initial"
                   animate="animate"
                   exit="exit"
-                  variants={badgeVariants}
+                  variants={fadeVariants}
                 >
                   <DSBadge />
                 </motion.div>
               )}
+
             </AnimatePresence>
+
+            {/* "Download CV" Button */}
+            <div className='relative top-40 ml-16'>
+              <a href={isActivated ? "/path-to-night-cv.pdf" : "/path-to-day-cv.pdf"}
+                download
+                className={` ${buttonClass}`}>
+                Download CV
+              </a>
+            </div>
+
+            {/* Resume */}
             <div className="grid grid-cols-12 gap-4 mt-10">
               <div className="col-start-4 col-end-10">
-                {resumeType === 'research' ? <Resume /> : <DSResume />}
+
+                {/* Resume Animation */}
+                <AnimatePresence mode='wait'>
+                  {resumeType === 'research' ? (
+                    <motion.div
+                      key="RSResume"
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={fadeVariants}
+                    >
+                      <Resume />
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      key="DSResume"
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={fadeVariants}
+                    >
+                      <DSResume />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </div>
 
-            {showRS ? <RSHours /> : <DSHours />}
-            <ContactFooter isDark={isActivated} />
+            {/* Hours Animation */}
+            <AnimatePresence mode='wait'>
+              {showRS ? (
+                <motion.div
+                  key="RSHours"
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={fadeVariants}
+                >
+                  <RSHours />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="DSHours"
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={fadeVariants}
+                >
+                  <DSHours />
+                </motion.div>
+              )}
+            </AnimatePresence>
 
-         
+            <ContactFooter isDark={isActivated} />
 
             {/* Animation Button */}
             <button
               onClick={handleButtonClick}
+              disabled={isButtonDisabled}
               className={`h-20 w-10 fixed top-1/4 right-0 z-50 text-white p-1 rounded-md text-xs flex items-center justify-center ${buttonColor === 'blue-500' ? 'bg-blue-500' : 'bg-black'}`}
             >
               <span className="transform -rotate-90">{buttonText}</span>

@@ -11,7 +11,7 @@ function Navbar({ navbarPosition }: NavbarProps) {
 
 
   return (
-    <div className="navbar-content">
+    <div className="navbar-pages">
         <nav 
           className="navbar-image bg-no-repeat p-2 sticky top-0 z-20 transition-all duration-2000 ease-in-out"
           style={{ backgroundPosition: navbarPosition }} // Apply here
@@ -52,7 +52,7 @@ function Navbar({ navbarPosition }: NavbarProps) {
         </li>
         <li>
           <Link 
-            href={'/certs'}
+            href={'/Certifications'}
             className="text-white hover:text-blue-300 cursor-pointer"
           >
             Certifications
