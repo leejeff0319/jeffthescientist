@@ -1,7 +1,5 @@
 // components/Sun.tsx
-
-"use client"
-import { motion, useAnimation } from 'framer-motion';
+import { motion} from 'framer-motion';
 
 interface SunProps {
   control: any;
@@ -17,6 +15,5 @@ function Sun({ control }: SunProps) {
       />
   );
 }
-
 
 export default Sun;

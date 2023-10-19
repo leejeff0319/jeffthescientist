@@ -1,10 +1,8 @@
-"use client"
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 interface NightProps {
   backgroundPosition: string;
 }
-
 
 function Night({ backgroundPosition }: NightProps) {
   const isNight = backgroundPosition === '85% 0%';
@@ -27,7 +25,6 @@ function Night({ backgroundPosition }: NightProps) {
     );
 });
 
-
   return (
       <div className="bg-blue-100 h-[37vh] flex justify-center">
           <div className="absolute w-full h-[30vh]">
@@ -45,7 +42,5 @@ function Night({ backgroundPosition }: NightProps) {
       </div>
   );
 }
-
-
 
 export default Night;

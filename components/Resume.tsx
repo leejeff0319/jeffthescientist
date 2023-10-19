@@ -153,9 +153,9 @@ function Resume() {
     };
 
     return (
-        <div className="bg-white p-6 rounded-lg shadow-lg text-base sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
+        <div className="bg-white p-6 mx-auto rounded-lg shadow-lg text-base sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
             {/* Tabs */}
-            <div className="flex mb-4 border-b justify-between">
+            <div className="flex mb-4 border-b justify-between text-xs xs:text-2xs sm:text-xs md:text-sm lg:text-base xl:text-xl 2xl:text-2xl">
                 {['education', 'research', 'clinical', 'leadership'].map(tab => (
                     <button
                         key={tab}

@@ -10,10 +10,8 @@ type CertsPageProps = {
 const CertsPage: React.FC<CertsPageProps> = ({ }) => {
   return (
     <>
-      <div className="grid grid-cols-12 gap-4 mt-10">
-        <div className="col-start-4 col-end-10">
+      <div className='relative center-content'>
           <Certs />
-        </div>
       </div>
 
     </>

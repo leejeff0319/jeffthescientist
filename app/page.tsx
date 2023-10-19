@@ -137,10 +137,8 @@ export default function Home() {
   return (
     <div >
       <div className="h-[37vh] flex justify-center">
-        <div className="absolute w-full h-[30vh]">
-
-          <div className="relative">
-
+        <div className="relative w-full h-[30vh]">
+            
             {/* Render the Sun and Night components */}
             <Sun control={sunControls} />
             <Moon control={moonControls} initial={{ x: "100vw" }} />
@@ -230,7 +228,7 @@ export default function Home() {
               <span className="transform -rotate-90">{buttonText}</span>
             </button>
 
-          </div>
+          
         </div>
       </div>
     </div>
