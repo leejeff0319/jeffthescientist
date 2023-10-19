@@ -8,12 +8,9 @@ import Scientist from '../components//Scientist';
 import Navbar from '../components//Navbar'
 import RSBadge from '../components//RSBadge';
 import DSBadge from '../components//DSBadge';
-import Resume from '../components//Resume';
-import DSResume from '../components//DSResume';
-import RSHours from '@/components/RSHours';
-import DSHours from '@/components/DSHours';
 import ContactFooter from '@/components/ContactFooter';
-
+import HomePage from '@/components/HomePage';
+import CertsPage from '@/components/CertsPage';
 
 export default function Home() {
   const [isActivated, setIsActivated] = useState(false);
@@ -30,12 +27,14 @@ export default function Home() {
   const [showRS, setShowRS] = useState(true);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const buttonClass = isActivated ? 'night-btn' : 'day-btn';
+  const [currentPage, setCurrentPage] = useState("home");
 
   const fadeVariants = {
     initial: { opacity: 0 },
     animate: { opacity: 1, transition: { duration: 0.5 } },
     exit: { opacity: 0, transition: { duration: 0.5 } }
   };
+  
   const setSun = () => {
     // The travel distance as a fraction of viewport width (e.g., if sun needs to travel half the viewport width, fraction will be 0.5)
     const travelFraction = window.innerWidth / (2 * window.innerWidth);
@@ -131,6 +130,10 @@ export default function Home() {
     }, 1000);
   };
 
+  const handlePageChange = (page: string) => {
+    setCurrentPage(page);
+  };
+
   return (
     <div >
       <div className="h-[37vh] flex justify-center">
@@ -142,13 +145,12 @@ export default function Home() {
             <Sun control={sunControls} />
             <Moon control={moonControls} initial={{ x: "100vw" }} />
             <Night backgroundPosition={backgroundPosition} />
-            <Navbar navbarPosition={navbarPosition} />
+            <Navbar navbarPosition={navbarPosition} onPageChange={handlePageChange} />
 
             {/* Scientist Animation */}
             <AnimatePresence>
               <Scientist role={role} time={time} key={role} />
             </AnimatePresence>
-
 
             {/* Badge Animations */}
             <AnimatePresence>
@@ -173,7 +175,6 @@ export default function Home() {
                   <DSBadge />
                 </motion.div>
               )}
-
             </AnimatePresence>
 
             {/* "Download CV" Button */}
@@ -185,62 +186,36 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Resume */}
-            <div className="grid grid-cols-12 gap-4 mt-10">
-              <div className="col-start-4 col-end-10">
-
-                {/* Resume Animation */}
-                <AnimatePresence mode='wait'>
-                  {resumeType === 'research' ? (
-                    <motion.div
-                      key="RSResume"
-                      initial="hidden"
-                      animate="visible"
-                      exit="exit"
-                      variants={fadeVariants}
-                    >
-                      <Resume />
-                    </motion.div>
-                  ) : (
-                    <motion.div
-                      key="DSResume"
-                      initial="hidden"
-                      animate="visible"
-                      exit="exit"
-                      variants={fadeVariants}
-                    >
-                      <DSResume />
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            </div>
-
-            {/* Hours Animation */}
+            {/* Load Home Page */}
             <AnimatePresence mode='wait'>
-              {showRS ? (
+              {currentPage === "home" && (
                 <motion.div
-                  key="RSHours"
+                  key="homePage"
+                  variants={fadeVariants}
                   initial="hidden"
                   animate="visible"
                   exit="exit"
-                  variants={fadeVariants}
                 >
-                  <RSHours />
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="DSHours"
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  variants={fadeVariants}
-                >
-                  <DSHours />
+                  <HomePage resumeType={resumeType} showRS={showRS} />
                 </motion.div>
               )}
+
+              {currentPage === "certifications" && (
+                <motion.div
+                  key="certsPage"
+                  variants={fadeVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
+                  <CertsPage />
+                </motion.div>
+              )}
+
+              {/* ... for other pages ... */}
             </AnimatePresence>
 
+            {/* Feedback Footer */}
             <ContactFooter isDark={isActivated} />
 
             {/* Animation Button */}

@@ -64,7 +64,7 @@
     /* Transitioning the left property */
 }
 
-.navbar-pages{
+.navbar-pages {
     position: relative;
     /* ADD SHADOW */
 }
@@ -168,7 +168,7 @@ body {
     color: #008bfd;
     box-shadow: 0 8px 6px -6px #555;
     transition: all .4s ease;
-    
+
 }
 
 .day-btn:hover {
@@ -181,7 +181,7 @@ body {
     padding: 8px 16px;
     border-radius: 4px;
     font: 400 16px 'Signika', sans-serif;
-    color: #4299e1;
+    color: white;
     box-shadow: 0 8px 6px -6px black;
     transition: all .4s ease;
 }
@@ -280,12 +280,17 @@ body {
 /* Hero Images */
 :root {
     --timing: 400ms;
-    --rotation: 20deg;
-  }
+    --rotation: 60deg;
+}
 
 .hero {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    aspect-ratio: 16 / 9;
     position: relative;
+    object-position: center;
     transform-style: preserve-3d;
     transition: rotate var(--timing) ease;
 }
@@ -299,9 +304,9 @@ body {
     position: absolute;
     inset: 0;
     z-index: 100;
-    /* background-image: radial-gradient(circle, transparent 150px, black); */
+
     opacity: 0;
-    transition: opacity 400ms;
+    transition: opacity var(--timing);
 }
 
 .hero:hover::before {
@@ -311,55 +316,52 @@ body {
 .hero::after {
     content: "";
     position: absolute;
-    inset: 80% 0.5rem 0.5rem;
+    inset: 90% 6rem 0.5rem;
     translate: 0;
     transform: translateZ(-100px);
-    /* background: black; */
+    background: black;
     filter: blur(1rem);
     z-index: 1;
     transition: rotate var(--timing), translate var(--timing);
-  }
-  
+}
 
-.hero>* {
-    position: relative;
-    /* opacity: 0; */
+.hero:hover::after {
+    rotate: x calc(var(--rotation) * -1);
+    translate: 0 60px;
 }
 
 .front-image {
     scale: 0.65;
     transform-origin: bottom;
-    opacity: 1;
+    opacity: 0;
     z-index: 100;
     transition: var(--timing);
-    
 }
 
-.sectionName,
+.logo,
 .front-image {
-  position: absolute;
+    position: absolute;
 }
 
 
-.sectionName {
-  z-index: 1000;
-  filter: invert(1);
-  width: 65%;
-  margin-inline: auto;
-  inset: auto 0 2rem;
-  transform: translateY(0rem) translateZ(20px);
-  transition: var(--timing);
+.logo {
+    z-index: 1000;
+    filter: invert(1);
+    width: 65%;
+    margin-inline: auto;
+    inset: auto 0 2rem;
+    transform: translateY(0rem) translateZ(20px);
+    transition: var(--timing);
 }
 
-.hero:hover .sectionName {
-  transform: translateY(-2rem) translateZ(20px);
-  rotate: x calc(var(--rotation) * -1);
+.hero:hover .logo {
+    transform: translateY(-2rem) translateZ(20px);
+    rotate: x calc(var(--rotation) * -1);
 }
 
 .hero:hover .front-image {
-    scale: 0.70;
-    opacity: 1;
-    transform: translateY(2rem) translateZ(-10px);
+    opacity: 0.8;
+    transform: translateY(-5rem) translateZ(-10px);
     rotate: x calc(var(--rotation) * -1);
 }
 
@@ -368,12 +370,5 @@ body {
     z-index: 10;
     height: 100%;
     object-fit: cover;
-}
-
-.move-up {
-    margin-top: -200px; /* Adjust this value as needed */
-}
-
-.move-down {
-    margin-top: 375px; /* Adjust this value as needed */
+    object-position: center;
 }
