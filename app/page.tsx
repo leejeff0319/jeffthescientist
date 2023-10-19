@@ -34,7 +34,7 @@ export default function Home() {
     animate: { opacity: 1, transition: { duration: 0.5 } },
     exit: { opacity: 0, transition: { duration: 0.5 } }
   };
-  
+
   const setSun = () => {
     // The travel distance as a fraction of viewport width (e.g., if sun needs to travel half the viewport width, fraction will be 0.5)
     const travelFraction = window.innerWidth / (2 * window.innerWidth);
@@ -152,38 +152,41 @@ export default function Home() {
               <Scientist role={role} time={time} key={role} />
             </AnimatePresence>
 
-            {/* Badge Animations */}
-            <AnimatePresence>
-              {currentBadge === 'RS' ? (
-                <motion.div
-                  key="RS"  // <-- Add this
-                  initial="initial"
-                  animate="animate"
-                  exit="exit"
-                  variants={fadeVariants}
-                >
-                  <RSBadge />
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="DS"  // <-- Add this
-                  initial="initial"
-                  animate="animate"
-                  exit="exit"
-                  variants={fadeVariants}
-                >
-                  <DSBadge />
-                </motion.div>
-              )}
-            </AnimatePresence>
 
-            {/* "Download CV" Button */}
-            <div className='relative top-40 ml-16'>
-              <a href={isActivated ? "/path-to-night-cv.pdf" : "/path-to-day-cv.pdf"}
-                download
-                className={` ${buttonClass}`}>
-                Download CV
-              </a>
+            <div className="badge-container absolute top-100">
+              {/* Badge Animations */}
+              <AnimatePresence>
+                {currentBadge === 'RS' ? (
+                  <motion.div
+                    key="RS"  // <-- Add this
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                    variants={fadeVariants}
+                  >
+                    <RSBadge />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="DS"  // <-- Add this
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                    variants={fadeVariants}
+                  >
+                    <DSBadge />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              {/* "Download CV" Button */}
+              <div className='relative top-40 ml-16'>
+                <a href={isActivated ? "/path-to-night-cv.pdf" : "/path-to-day-cv.pdf"}
+                  download
+                  className={` ${buttonClass}`}>
+                  Download CV
+                </a>
+              </div>
             </div>
 
             {/* Load Home Page */}

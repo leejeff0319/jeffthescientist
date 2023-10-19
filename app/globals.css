@@ -43,6 +43,7 @@
     /* This will position the image to the top-left */
     background-repeat: no-repeat;
     transition: background-position 1s ease-out;
+    position: fixed sticky;
 }
 
 .duration-4000 {
@@ -62,11 +63,6 @@
     /* or absolute, based on your layout needs */
     transition: left 4s ease-in-out;
     /* Transitioning the left property */
-}
-
-.navbar-pages {
-    position: relative;
-    /* ADD SHADOW */
 }
 
 .element {
@@ -371,4 +367,32 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+/* Scale Badge */
+.badge-container {
+    transition: transform 0.5s ease-out; /* adjust the duration as you like */
+    position: fixed;
+    top: 40%; /* start position */
+}
+
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+    .badge-container {
+        transform: scale(0.5);
+    }
+}
+
+/* For screens between 601px and 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+    .badge-container {
+        transform: scale(0.8);
+    }
+}
+
+/* For screens larger than 900px */
+@media (min-width: 1200px) {
+    .badge-container {
+        transform: scale(1.2) translateX(15px);
+    }
 }
