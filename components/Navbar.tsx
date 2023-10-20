@@ -1,7 +1,5 @@
 // components/Navbar.tsx
-"use client"
 import React from 'react';
-import Link from 'next/link';
 
 interface NavbarProps {
   navbarPosition: string; // Ensure it's named navbarPosition
@@ -10,9 +8,9 @@ interface NavbarProps {
 function Navbar({ navbarPosition, onPageChange }: NavbarProps & { onPageChange: (page: string) => void }) {
 
   return (
-    <div className="navbar-pages">
+    <div className="navbar pb-2 top-0 z-20">
       <nav
-        className="navbar-image bg-no-repeat p-2 sticky top-0 z-20 transition-all duration-2000 ease-in-out"
+        className="navbar-image pb-2 bg-no-repeat transition-all duration-2000 ease-in-out"
         style={{ backgroundPosition: navbarPosition }}
       >
         <ul className="flex justify-center space-x-40">

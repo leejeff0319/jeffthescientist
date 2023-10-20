@@ -31,10 +31,10 @@ const Scientist: React.FC<ScientistProps> = ({ role, time }) => {
         exit="exit"
         variants={slideVariants}
         transition={{ duration: 1 }}
-        className={`absolute top-64 ${roleClass} text-blue-700 bg-transparent text-5xl text-shadow font-bold`}>
+        className={`absolute top-64 ${roleClass} text-blue-700 bg-transparent text-5xl text-shadow font-bold z-50`}>
         {role}
       </motion.span>
-      <span className="absolute top-64 left-80 text-blue-700 bg-transparent text-5xl text-shadow font-bold">
+      <span className="absolute top-64 left-80 text-blue-700 bg-transparent text-5xl text-shadow font-bold z-50">
         Scientist
       </span>
       {/* Fading Animation for Time */}
@@ -44,7 +44,7 @@ const Scientist: React.FC<ScientistProps> = ({ role, time }) => {
         exit="exit"
         variants={fadeVariants}
         transition={{ duration: 1 }}
-        className="absolute top-80 left-96 text-blue-700 bg-transparent text-3xl text-shadow font-bold"
+        className="absolute top-80 left-96 text-blue-700 bg-transparent text-3xl text-shadow font-bold z-50"
       >
         {time}
       </motion.span>

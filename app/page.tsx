@@ -29,6 +29,7 @@ export default function Home() {
   const buttonClass = isActivated ? 'night-btn' : 'day-btn';
   const [currentPage, setCurrentPage] = useState("home");
 
+
   const fadeVariants = {
     initial: { opacity: 0 },
     animate: { opacity: 1, transition: { duration: 0.5 } },
@@ -36,36 +37,38 @@ export default function Home() {
   };
 
   const setSun = () => {
-    // The travel distance as a fraction of viewport width (e.g., if sun needs to travel half the viewport width, fraction will be 0.5)
-    const travelFraction = window.innerWidth / (2 * window.innerWidth);
-
-    // A constant value for how long it should take the sun to travel the entire width of the viewport.
-    const fullScreenWidthDuration = 4; // 10 seconds to travel full viewport width, adjust as needed
-    const duration = fullScreenWidthDuration * travelFraction;
+    // Calculate the amount the Sun needs to move to go off-screen
+    const sunElement = document.querySelector('.sun') as HTMLElement;
+    if (!sunElement) {
+      return;
+    }
+    const moveDistance = window.innerWidth + sunElement.offsetWidth;
 
     sunControls.start({
-      x: "-30vw",
-      backgroundColor: "#F87171", // This is roughly tailwind's orange-600
+      x: -moveDistance,
+      backgroundColor: "#F87171",
       transition: {
-        duration: duration
+        duration: 4
       }
     });
   }
-  const setMoon = () => {
-    // The travel distance as a fraction of viewport width (e.g., if sun needs to travel half the viewport width, fraction will be 0.5)
-    const travelFraction = window.innerWidth / (2 * window.innerWidth);
 
-    // A constant value for how long it should take the sun to travel the entire width of the viewport.
-    const fullScreenWidthDuration = 4;
-    const duration = fullScreenWidthDuration * travelFraction;
+  const setMoon = () => {
+    // Calculate the starting position for the Moon to be off-screen
+    const moonElement = document.querySelector('.moon') as HTMLElement;
+    if (!moonElement) {
+      return;
+    }
+    const moveDistance = window.innerWidth + moonElement.offsetWidth;
 
     moonControls.start({
-      x: "57vw",
+      x: window.innerWidth - moveDistance,
       transition: {
-        duration: duration
+        duration: 1
       }
     });
   }
+
 
   {/*Animations*/ }
   const handleButtonClick = () => {
@@ -135,103 +138,104 @@ export default function Home() {
   };
 
   return (
-    <div >
-      <div className="h-[37vh] flex justify-center">
-        <div className="relative w-full h-[30vh]">
-            
-            {/* Render the Sun and Night components */}
-            <Sun control={sunControls} />
-            <Moon control={moonControls} initial={{ x: "100vw" }} />
-            <Night backgroundPosition={backgroundPosition} />
-            <Navbar navbarPosition={navbarPosition} onPageChange={handlePageChange} />
-
-            {/* Scientist Animation */}
-            <AnimatePresence>
-              <Scientist role={role} time={time} key={role} />
-            </AnimatePresence>
+    <div>
+      <div className="relative" style={{height: '150vh'}} >
+        {/* Render the Sun and Night components */}
+        <Sun control={sunControls} />
+        <Moon control={moonControls} initial={{ x: "100vw" }} />
 
 
-            <div className="badge-container absolute top-100">
-              {/* Badge Animations */}
-              <AnimatePresence>
-                {currentBadge === 'RS' ? (
-                  <motion.div
-                    key="RS"  // <-- Add this
-                    initial="initial"
-                    animate="animate"
-                    exit="exit"
-                    variants={fadeVariants}
-                  >
-                    <RSBadge />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="DS"  // <-- Add this
-                    initial="initial"
-                    animate="animate"
-                    exit="exit"
-                    variants={fadeVariants}
-                  >
-                    <DSBadge />
-                  </motion.div>
-                )}
-              </AnimatePresence>
+        {/* Scientist Animation */}
+        <AnimatePresence>
+          <Scientist role={role} time={time} key={role} />
+        </AnimatePresence>
 
-              {/* "Download CV" Button */}
-              <div className='relative top-40 ml-16'>
-                <a href={isActivated ? "/path-to-night-cv.pdf" : "/path-to-day-cv.pdf"}
-                  download
-                  className={` ${buttonClass}`}>
-                  Download CV
-                </a>
-              </div>
-            </div>
+    
+          <Night backgroundPosition={backgroundPosition} />
+          <Navbar navbarPosition={navbarPosition} onPageChange={handlePageChange} />
+        
 
-            {/* Load Home Page */}
-            <AnimatePresence mode='wait'>
-              {currentPage === "home" && (
-                <motion.div
-                  key="homePage"
-                  variants={fadeVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                >
-                  <HomePage resumeType={resumeType} showRS={showRS} />
-                </motion.div>
-              )}
+        {/* Badge Container */}
+        <div className="badge-container absolute top-100">
+          {/* Badge Animations */}
+          <AnimatePresence>
+            {currentBadge === 'RS' ? (
+              <motion.div
+                key="RS"  // <-- Add this
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={fadeVariants}
+              >
+                <RSBadge />
+              </motion.div>
+            ) : (
+              <motion.div
+                key="DS"  // <-- Add this
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={fadeVariants}
+              >
+                <DSBadge />
+              </motion.div>
+            )}
+          </AnimatePresence>
 
-              {currentPage === "certifications" && (
-                <motion.div
-                  key="certsPage"
-                  variants={fadeVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                >
-                  <CertsPage />
-                </motion.div>
-              )}
-
-              {/* ... for other pages ... */}
-            </AnimatePresence>
-
-            {/* Feedback Footer */}
-            <ContactFooter isDark={isActivated} />
-
-            {/* Animation Button */}
-            <button
-              onClick={handleButtonClick}
-              disabled={isButtonDisabled}
-              className={`h-20 w-10 fixed top-1/4 right-0 z-50 text-white p-1 rounded-md text-xs flex items-center justify-center ${buttonColor === 'blue-500' ? 'bg-blue-500' : 'bg-black'}`}
-            >
-              <span className="transform -rotate-90">{buttonText}</span>
-            </button>
-
-          
+          {/* "Download CV" Button */}
+          <div className='relative top-40 ml-16'>
+            <a href={isActivated ? "/path-to-night-cv.pdf" : "/path-to-day-cv.pdf"}
+              download
+              className={` ${buttonClass}`}>
+              Download CV
+            </a>
+          </div>
         </div>
+
+        {/* Load Home Page */}
+        <AnimatePresence mode='wait'>
+          {currentPage === "home" && (
+            <motion.div
+              key="homePage"
+              variants={fadeVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              <HomePage resumeType={resumeType} showRS={showRS} />
+            </motion.div>
+          )}
+
+          {currentPage === "certifications" && (
+            <motion.div
+              key="certsPage"
+              variants={fadeVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              <CertsPage />
+            </motion.div>
+          )}
+
+          {/* ... for other pages ... */}
+        </AnimatePresence>
+
+        {/* Feedback Footer */}
+        <ContactFooter isDark={isActivated} />
+
+        {/* Animation Button */}
+        <button
+          onClick={handleButtonClick}
+          disabled={isButtonDisabled}
+          className={`h-20 w-10 fixed top-1/4 right-0 z-50 text-white p-1 rounded-md text-xs flex items-center justify-center ${buttonColor === 'blue-500' ? 'bg-blue-500' : 'bg-black'}`}
+        >
+          <span className="transform -rotate-90">{buttonText}</span>
+        </button>
+
       </div>
     </div>
+
 
   )
 }
