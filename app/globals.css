@@ -449,3 +449,33 @@ body {
     }
 }
 
+/* Scale Role */
+.role-container {
+    transform-origin: center;
+}
+
+/* For screens smaller than 600px */
+@media (max-width: 650px) {
+    .role-container {
+        transform: scale(0.5) translateX(-50px) translateY(350px);
+    }
+}
+
+@media (min-width: 651px) and (max-width: 800px) {
+    .role-container {
+        transform: scale(0.65) translateX(-50px) translateY(200px);
+    }
+}
+/* For screens between 601px and 900px */
+@media (min-width: 801px) and (max-width: 1200px) {
+    .role-container {
+        transform: scale(0.8) translateX(-50px) translateY(100px);
+    }
+}
+
+/* For screens larger than 900px */
+@media (min-width: 1200px) {
+    .role-container {
+        transform: scale(1) translateX(0px) translateY(20px) ;
+    }
+}

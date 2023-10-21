@@ -141,23 +141,22 @@ export default function Home() {
     <div>
       <div className="relative"  >
 
+        <div className='role-container absolute z-50'>
+          {/* Scientist Animation */}
+          <AnimatePresence>
+            <Scientist role={role} time={time} key={role} />
+          </AnimatePresence>
+        </div>
+
         {/* Render the Sun and Night components */}
         <Sun control={sunControls} />
         <Moon control={moonControls} initial={{ x: "100vw" }} />
         <Night backgroundPosition={backgroundPosition} />
 
-        {/* Scientist Animation */}
-        
-          <AnimatePresence>
-            <Scientist role={role} time={time} key={role} />
-          </AnimatePresence>
-       
-
+        {/* Navbar */}
         <div className='flex'>
-          {/* Navbar */}
           <Navbar navbarPosition={navbarPosition} onPageChange={handlePageChange} />
         </div>
-
 
         {/* Badge Container */}
         <div className="badge-container absolute top-100">
