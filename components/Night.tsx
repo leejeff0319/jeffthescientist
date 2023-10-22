@@ -20,7 +20,7 @@ function Night({ backgroundPosition }: NightProps) {
         setStarsPositions(stars);
 
         const clouds = Array(5).fill(null).map((_, index) => ({
-            top: `${Math.random() * 30}%`,  // This ensures clouds are within the top 30% of the Night component
+            top: `${Math.random() * 20}%`,  // This ensures clouds are within the top 30% of the Night component
             left: `${index * cloudSpacing + (Math.random() * cloudSpacing - 50)}%`
         }));
         setCloudsPositions(clouds);

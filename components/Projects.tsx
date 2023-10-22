@@ -9,7 +9,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkTheme }) => {
 
     return (
 
-        <div className='grid grid-cols-2 gap-4'>
+        <div className='grid grid-cols-2 gap-4 mr-3 ml-3'>
             <div className={`${bgColorClass} p-5 rounded-md`}> {/*add project description under*/}
                 <div className="hero-projects">
                     <img className="logo" src="" alt="" />

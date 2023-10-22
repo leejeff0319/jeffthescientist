@@ -343,7 +343,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 350px;
-    aspect-ratio: 10/12;
+    aspect-ratio: 16/9;
     position: relative;
     object-position: center;
     transform-style: preserve-3d;
