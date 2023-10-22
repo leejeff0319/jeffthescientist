@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react';
 
-const Certs = () => {
+type CertsProps = {
+    isDarkTheme: boolean;
+};
+
+const Certs: React.FC<CertsProps> = ({ isDarkTheme }) => {
+    const bgColorClass = isDarkTheme ? 'bg-gray-500' : 'bg-blue-300';
 
     return (
         <div>
-            <div className="certs-container-right "> 
-                <div className=" bg-blue-300 p-5 rounded-md"> {/*add skills here*/}
+            <div className="certs-container-right ">
+                <div className={`${bgColorClass} p-5 rounded-md`}> {/*add skills here*/}
                     <div className="hero ">
                         <img className="logo" src="" alt="" />
                         <img className="front-image" src="GADA_fi_transparent.png" alt="GADA front image" />
@@ -14,8 +19,8 @@ const Certs = () => {
                 </div>
             </div>
 
-            <div className="certs-container">  
-                <div className=" bg-blue-300 p-5 rounded-md"> {/*add skills here*/}
+            <div className="certs-container">
+                <div className={`${bgColorClass} p-5 rounded-md`}> {/*add skills here*/}
                     <div className="hero ">
                         <img className="logo" src="" alt="" />
                         <img className="front-image" src="p4e_fi.png" alt="" width='400px' />
@@ -24,8 +29,8 @@ const Certs = () => {
                 </div>
             </div>
 
-            <div className="certs-container-right"> 
-                <div className=" bg-blue-300 p-5 rounded-md"> {/*add skills here*/}
+            <div className="certs-container-right">
+                <div className={`${bgColorClass} p-5 rounded-md`}> {/*add skills here*/}
                     <div className="hero  ">
                         <img className="logo" src="" alt="" />
                         <img className="front-image" src="GDA_fi_transparent.png" alt="" />

@@ -11,6 +11,9 @@ import DSBadge from '../components//DSBadge';
 import ContactFooter from '@/components/ContactFooter';
 import HomePage from '@/components/HomePage';
 import CertsPage from '@/components/CertsPage';
+// import ProjectsPage from '@/components/ProjectsPage';
+// import AboutPage from '@/components/AboutPage';
+import NotesPage from '@/components/NotesPage';
 
 export default function Home() {
   const [isActivated, setIsActivated] = useState(false);
@@ -28,6 +31,8 @@ export default function Home() {
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const buttonClass = isActivated ? 'night-btn' : 'day-btn';
   const [currentPage, setCurrentPage] = useState("home");
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
   useEffect(() => {
     document.body.classList.add('body-blue-100');
     return () => {
@@ -78,6 +83,7 @@ export default function Home() {
   {/*Animations*/ }
   const handleButtonClick = () => {
     setIsButtonDisabled(true);
+    setIsDarkTheme(prev => !prev);
 
     if (isActivated) {
       // Play reverse animations
@@ -222,7 +228,19 @@ export default function Home() {
               animate="visible"
               exit="exit"
             >
-              <CertsPage />
+              <CertsPage isDarkTheme={isDarkTheme} />
+            </motion.div>
+          )}
+
+          {currentPage === "notes" && (
+            <motion.div
+              key="projectsPage"
+              variants={fadeVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              <NotesPage isDarkTheme={isDarkTheme}/>
             </motion.div>
           )}
 

@@ -10,7 +10,7 @@ const DSHours = () => {
         <div style={{ backgroundColor: '#2C2F31' }} className="flex w-full mt-10 py-16 justify-center">  {/* Adjust styles as needed */}
                 <div className="grid md:grid-cols-4 grid-cols-1 gap-4 items-center w-3/4 m-auto">
                     {/* Research Hours */}
-                    <div className="   md:w-1/4 mx-auto">
+                    <div className=" md:w-1/4 mx-auto">
                         <div className="flex">
                             <div className="w-5/12 text-right text-white border-r py-3 flex items-center justify-end">
                                 <div className="self-center mr-3">

@@ -382,6 +382,11 @@ body {
 }
 
 /* Scale Certificates*/
+.certs-wrapper {
+    display: inline-block; /* to shrink wrap the content */
+    overflow: hidden; /* to cut off any excess space */
+}
+
 .certs-container {
     transform-origin: center;
     display: flex;
@@ -390,7 +395,7 @@ body {
 .certs-container-right {
     transform-origin: center;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
 }
 
 /* For screens smaller than 600px */
@@ -406,14 +411,14 @@ body {
     }
 }
 /* For screens between 601px and 900px */
-@media (min-width: 801px) and (max-width: 1200px) {
+@media (min-width: 801px) and (max-width: 1600px) {
     .certs-container, .certs-container-right {
         transform: scale(0.8)  ;
     }
 }
 
 /* For screens larger than 900px */
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
     .certs-container, .certs-container-right {
         transform: scale(1) ;
     }
