@@ -338,6 +338,64 @@ body {
     translate: 0 60px;
 }
 
+.hero-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    aspect-ratio: 10/12;
+    position: relative;
+    object-position: center;
+    transform-style: preserve-3d;
+    transition: rotate var(--timing) ease;
+}
+
+.hero-projects:hover {
+    rotate: x var(--rotation);
+}
+
+.hero-projects::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+
+    opacity: 0;
+    transition: opacity var(--timing);
+}
+
+.hero-projects:hover::before {
+    opacity: 1;
+}
+
+.hero-projects::after {
+    content: "";
+    position: absolute;
+    inset: 90% 1rem 0.5rem;
+    translate: 0;
+    transform: translateZ(-100px);
+    background: black;
+    filter: blur(1rem);
+    z-index: 1;
+    transition: rotate var(--timing), translate var(--timing);
+}
+
+.hero-projects:hover::after {
+    rotate: x calc(var(--rotation) * -1);
+    translate: 0 60px;
+}
+
+.hero-projects:hover .logo {
+    transform: translateY(-2rem) translateZ(20px);
+    rotate: x calc(var(--rotation) * -1);
+}
+
+.hero-projects:hover .front-image {
+    opacity: 0.8;
+    transform: translateY(-5rem) translateZ(-10px);
+    rotate: x calc(var(--rotation) * -1);
+}
+
 .front-image {
     scale: 0.65;
     transform-origin: bottom;

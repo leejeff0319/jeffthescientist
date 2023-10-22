@@ -11,8 +11,8 @@ import DSBadge from '../components//DSBadge';
 import ContactFooter from '@/components/ContactFooter';
 import HomePage from '@/components/HomePage';
 import CertsPage from '@/components/CertsPage';
-// import ProjectsPage from '@/components/ProjectsPage';
-// import AboutPage from '@/components/AboutPage';
+import ProjectsPage from '@/components/ProjectsPage';
+import AboutPage from '@/components/AboutPage';
 import NotesPage from '@/components/NotesPage';
 
 export default function Home() {
@@ -220,6 +220,42 @@ export default function Home() {
             </motion.div>
           )}
 
+          {currentPage === "about" && (
+            <motion.div
+              key="aboutPage"
+              variants={fadeVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              <AboutPage isDarkTheme={isDarkTheme} />
+            </motion.div>
+          )}
+
+          {currentPage === "projects" && (
+            <motion.div
+              key="projectsPage"
+              variants={fadeVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              <ProjectsPage isDarkTheme={isDarkTheme} />
+            </motion.div>
+          )}
+
+          {currentPage === "notes" && (
+            <motion.div
+              key="projectsPage"
+              variants={fadeVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              <NotesPage isDarkTheme={isDarkTheme} />
+            </motion.div>
+          )}
+
           {currentPage === "certifications" && (
             <motion.div
               key="certsPage"
@@ -232,19 +268,6 @@ export default function Home() {
             </motion.div>
           )}
 
-          {currentPage === "notes" && (
-            <motion.div
-              key="projectsPage"
-              variants={fadeVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            >
-              <NotesPage isDarkTheme={isDarkTheme}/>
-            </motion.div>
-          )}
-
-          {/* ... for other pages ... */}
         </AnimatePresence>
 
         {/* Feedback Footer */}
