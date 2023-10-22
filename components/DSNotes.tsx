@@ -5,8 +5,8 @@ const DSNotes: React.FC = () => {
     <div className='grid grid-cols-2 gap-4'>
       <div style= {{background: '#3E4143'}}
       className=' m-2 rounded-md p-2'>
-        <div className='text-2xl text-center text-gray-200'><strong>Statistics</strong></div>
-        <div className='text-md text-left text-gray-200 mx-3'>
+        <div className='text-xs sm:text-md md:text-xl lg:text-xl 2xl:text-2xl text-center text-gray-200'><strong>Statistics</strong></div>
+        <div className='text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl text-left text-gray-200 mx-3'>
           <ul>
           <li><a href="https://github.com/leejeff0319/Notes/blob/main/Statistics/ANOVA_posthoc/ANOVA%20%26%20post%20hoc%20test.ipynb" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:underline">ANOVA & post hoc Test</a></li>
           </ul>
@@ -14,8 +14,8 @@ const DSNotes: React.FC = () => {
       </div>
       <div style= {{background: '#3E4143'}}
       className='bg- m-2 rounded-md p-2'>
-        <div className='text-2xl text-center text-gray-200'><strong>Machine Learning Models</strong></div>
-        <div className='text-md text-left text-gray-200 mx-3'>
+        <div className='text-xs sm:text-md md:text-xl lg:text-xl 2xl:text-2xl text-center text-gray-200'><strong>Machine Learning Models</strong></div>
+        <div className='text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl text-left text-gray-200 mx-3'>
           <ul>
             <li><a href="https://github.com/leejeff0319/Notes/blob/main/Machine%20Learning%20Models/Decision%20Tree/Decision%20Tree%20%26%20Confusion%20Matrix.ipynb" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:underline">Decision Trees & Confusion Matrix</a></li>
             <li><a href="https://github.com/leejeff0319/Notes/blob/main/Machine%20Learning%20Models/K-means/K-means.ipynb" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:underline">K-means</a></li>
@@ -28,8 +28,8 @@ const DSNotes: React.FC = () => {
       </div>
       <div style= {{background: '#3E4143'}}
       className='bg- m-2 rounded-md p-2'>
-        <div className='text-2xl text-center text-gray-200'><strong>Pytorch</strong></div>
-        <div className='text-md text-left text-gray-200 mx-3'>
+        <div className='text-xs sm:text-md md:text-xl lg:text-xl 2xl:text-2xl text-center text-gray-200'><strong>Pytorch</strong></div>
+        <div className='text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl text-left text-gray-200 mx-3'>
           <ul>
             <li><a href="https://github.com/leejeff0319/Notes/blob/main/PyTorch/Activation%20Functions.ipynb" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:underline">Activation Functions</a></li>
             <li><a href="https://github.com/leejeff0319/Notes/blob/main/PyTorch/Binary%20vs.%20Multi%20class.ipynb" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:underline">Binary vs. Multi class</a></li>
@@ -47,8 +47,8 @@ const DSNotes: React.FC = () => {
       </div>
       <div style= {{background: '#3E4143'}}
       className='bg- m-2 rounded-md p-2'>
-        <div className='text-2xl text-center text-gray-200'><strong>TensorFlow</strong></div>
-        <div className='text-md text-left text-gray-200 mx-3'>
+        <div className='text-xs sm:text-md md:text-xl lg:text-xl 2xl:text-2xl text-center text-gray-200'><strong>TensorFlow</strong></div>
+        <div className='text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl text-left text-gray-200 mx-3'>
           <ul>
             <li></li>
           </ul>

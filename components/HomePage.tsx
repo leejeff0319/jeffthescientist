@@ -22,7 +22,7 @@ const HomePage: React.FC<HomePageProps> = ({ resumeType, showRS }) => {
             {/* Resume */}
             <div className=" grid grid-cols-12 gap-4 mt-10 ">
                 <div className="col-start-4 col-end-12">
-
+                    
                     {/* Resume Animation */}
                     <AnimatePresence mode='wait'>
                         {resumeType === 'research' ? (
