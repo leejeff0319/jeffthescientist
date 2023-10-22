@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const RSBadge: React.FC = () => {
     return (
-        <div className="absolute top-100">
+        <div>
             {/*Profile Pic*/}
             <div className="absolute top-0 left-0 z-10">
                 <Image src="/profile.jpg" objectFit="cover" width="60" height="50" alt="Profile Picture" className="mt-5 ml-4"/>
@@ -11,7 +11,7 @@ const RSBadge: React.FC = () => {
 
             {/*Badge*/}
             {/*Badge-Top*/}
-            <div className="mt-3 bg-blue-200 border border-gray-400 p-1 ml-2 pl-4 pr-14 rounded-t-md broder-b-0">
+            <div className="mt-3 bg-blue-200 border p-1 ml-2 pl-4 pr-14 rounded-t-md broder-b-0">
                 <p className="relative mt-2 justify-left left-16 text-sm font-bold">
                     Jeff Youngjae Lee
                 </p>
@@ -30,7 +30,7 @@ const RSBadge: React.FC = () => {
             </div>
 
             {/*Badge-Bottom*/}
-            <div className="bg-blue-800 border border-gray-500 p-1 ml-2 pl-4 rounded-b-md border-t-0">
+            <div className="bg-blue-800 border p-1 ml-2 pl-4 rounded-b-md border-t-0">
                 <p className="text-white font-bold relative justify-left left-7 text-xs">
                     Boston Children's Hospital
                 </p>

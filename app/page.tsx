@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useAnimation } from 'framer-motion';
 import Sun from '../components/Sun';
 import Moon from '../components//Moon'
@@ -28,7 +28,12 @@ export default function Home() {
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const buttonClass = isActivated ? 'night-btn' : 'day-btn';
   const [currentPage, setCurrentPage] = useState("home");
-
+  useEffect(() => {
+    document.body.classList.add('body-blue-100');
+    return () => {
+      document.body.classList.remove('body-blue-100');
+    };
+  }, []);
 
   const fadeVariants = {
     initial: { opacity: 0 },
@@ -100,7 +105,7 @@ export default function Home() {
       setButtonText("Data Science");
       setButtonColor("blue-500");
       document.body.classList.remove('body-gray-800');
-      document.body.classList.add('body-blue-100');;
+      document.body.classList.add('body-blue-100');
       setResumeType('research');
       setShowRS(true);
 
@@ -161,7 +166,7 @@ export default function Home() {
         {/* Badge Container */}
         <div className="badge-container absolute top-100">
           {/* Badge Animations */}
-          <AnimatePresence>
+          <AnimatePresence mode='wait'>
             {currentBadge === 'RS' ? (
               <motion.div
                 key="RS"  // <-- Add this
@@ -186,7 +191,7 @@ export default function Home() {
           </AnimatePresence>
 
           {/* "Download CV" Button */}
-          <div className='relative top-40 ml-16'>
+          <div className='relative top-5 ml-16'>
             <a href={isActivated ? "/path-to-night-cv.pdf" : "/path-to-day-cv.pdf"}
               download
               className={` ${buttonClass}`}>

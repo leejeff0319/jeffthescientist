@@ -296,7 +296,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 600px;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 12 / 9;
     position: relative;
     object-position: center;
     transform-style: preserve-3d;
@@ -324,7 +324,7 @@ body {
 .hero::after {
     content: "";
     position: absolute;
-    inset: 90% 6rem 0.5rem;
+    inset: 90% 1rem 0.5rem;
     translate: 0;
     transform: translateZ(-100px);
     background: black;
@@ -381,36 +381,44 @@ body {
     object-position: center;
 }
 
-/* Scale General*/
-.scale-container {
-    transform-origin: top right;
+/* Scale Certificates*/
+.certs-container {
+    transform-origin: center;
+    display: flex;
+}
+
+.certs-container-right {
+    transform-origin: center;
+    display: flex;
+    justify-content: right;
 }
 
 /* For screens smaller than 600px */
 @media (max-width: 650px) {
-    .scale-container {
-        transform: scale(0.5) translateX(-125px);
+    .certs-container, .certs-container-right {
+        transform: scale(0.33) ;
     }
 }
 
 @media (min-width: 651px) and (max-width: 800px) {
-    .scale-container {
-        transform: scale(0.65) translateX(-50px);
+    .certs-container, .certs-container-right {
+        transform: scale(0.65) ;
     }
 }
 /* For screens between 601px and 900px */
 @media (min-width: 801px) and (max-width: 1200px) {
-    .scale-container {
-        transform: scale(0.8) translateX(-25px);
+    .certs-container, .certs-container-right {
+        transform: scale(0.8)  ;
     }
 }
 
 /* For screens larger than 900px */
 @media (min-width: 1200px) {
-    .scale-container {
-        transform: scale(1.2) translateX(15px);
+    .certs-container, .certs-container-right {
+        transform: scale(1) ;
     }
 }
+
 
 .center-content {
     display: flex;
@@ -426,19 +434,19 @@ body {
 /* For screens smaller than 600px */
 @media (max-width: 650px) {
     .badge-container {
-        transform: scale(0.4) translateX(-150px);
+        transform: scale(0.4) translateX(-190px) translateY(-125px);
     }
 }
 
 @media (min-width: 651px) and (max-width: 800px) {
     .badge-container {
-        transform: scale(0.65) translateX(-50px);
+        transform: scale(0.65) translateX(-50px) translateY(-60px);
     }
 }
 /* For screens between 601px and 900px */
 @media (min-width: 801px) and (max-width: 1200px) {
     .badge-container {
-        transform: scale(0.8) translateX(-25px);
+        transform: scale(0.8) translateX(-25px) translateY(-35px);
     }
 }
 
@@ -457,19 +465,19 @@ body {
 /* For screens smaller than 600px */
 @media (max-width: 650px) {
     .role-container {
-        transform: scale(0.5) translateX(-50px) translateY(350px);
+        transform: scale(0.65) translateX(-50px) translateY(200px);
     }
 }
 
 @media (min-width: 651px) and (max-width: 800px) {
     .role-container {
-        transform: scale(0.65) translateX(-50px) translateY(200px);
+        transform: scale(0.8) translateX(-50px) translateY(100px);
     }
 }
 /* For screens between 601px and 900px */
 @media (min-width: 801px) and (max-width: 1200px) {
     .role-container {
-        transform: scale(0.8) translateX(-50px) translateY(100px);
+        transform: scale(1) translateX(0px) translateY(20px) ;
     }
 }
 
@@ -479,3 +487,4 @@ body {
         transform: scale(1) translateX(0px) translateY(20px) ;
     }
 }
+
