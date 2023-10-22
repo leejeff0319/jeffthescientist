@@ -52,7 +52,7 @@ function DSResume() {
         education: (
             <div>
                 <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2 text-xxs sm:text-base md:lg lg:text-lg 2xl:text-2xl">
+                    <div className="flex items-center space-x-2 text-xxs sm:text-md md:text-xl lg:text-xl 2xl:text-2xl">
                         <img src="Gvandy.png" alt="Vanderbilt University" className="w-12 h-8" />
                         <span><strong>Vanderbilt University</strong>- B.S. Chemistry</span>
                     </div>
