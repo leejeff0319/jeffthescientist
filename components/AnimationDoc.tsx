@@ -16,7 +16,7 @@ const AnimationDocPage: React.FC<AnimationDocPageProps> = ({ isDarkTheme }) => {
 
                 {/* Title */}
                 <div className={`flex flex-col w-full items-center ${textColor} text-lg sm:text-xl md:text-3xl lg:text-4xl 2xl:text-5xl mb-2`}>
-                    <h1><strong>Animation Documentation</strong></h1>
+                    <h1><strong>Animation Journey</strong></h1>
                 </div>
 
                 {/* Image and Text Container */}
