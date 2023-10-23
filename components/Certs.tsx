@@ -10,7 +10,7 @@ const Certs: React.FC<CertsProps> = ({ isDarkTheme }) => {
     return (
         <div>
             <div className="certs-container-right ">
-                <div className={`${bgColorClass} p-5 rounded-md`}> {/*add skills here*/}
+                <div className={`${bgColorClass} p-5 rounded-md flex`}> {/*add skills here*/}
                     <div className="hero ">
                         <img className="logo" src="" alt="" />
                         <img className="front-image" src="GADA_fi_transparent.png" alt="GADA front image" />

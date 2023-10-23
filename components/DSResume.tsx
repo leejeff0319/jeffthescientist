@@ -4,12 +4,14 @@ import {
     RiReactjsFill,
     RiCss3Fill,
     RiJavascriptFill,
-    RiBootstrapLine,
     RiHtml5Fill,
+    RiBootstrapFill
 } from 'react-icons/ri';
 import { BiLogoTailwindCss,
-        BiGitBranch } from 'react-icons/bi';
-import { TbBrandNextjs } from 'react-icons/tb';
+        BiGitBranch,
+        BiLogoTypescript } from 'react-icons/bi';
+import { TbBrandNextjs,
+        } from 'react-icons/tb';
 import { DiNodejsSmall } from 'react-icons/di';
 import {
     SiJest,
@@ -71,7 +73,7 @@ function DSResume() {
         skills: (
                 <div>
                     <div className="mb-2">
-                        <span className="block text-left text-xxs sm:text-md md:text-xl lg:text-xl 2xl:text-2xl"><strong>Data Science</strong>- Machine Learning</span>
+                        <span className="block text-left text-xxs sm:text-md md:text-xl lg:text-xl 2xl:text-2xl"><strong>Data Science</strong>- AI / Machine Learning</span>
                         <div className="flex space-x-2 md:space-x-8 lg:space-x-16 justify-center">
                             <div className="flex flex-col items-center text-xs md:text-sm lg:text-base">
                                 <FaPython size={iconsSize} className="icon glow-icon-on-hover"/>
@@ -131,12 +133,16 @@ function DSResume() {
                         </div>
                         <div className="flex space-x-2 md:space-x-8 lg:space-x-16 justify-center mt-2">
                             <div className="flex flex-col items-center text-xs md:text-sm lg:text-base">
-                                <RiBootstrapLine size={iconsSize} className="icon glow-icon-on-hover" />
+                                <RiBootstrapFill size={iconsSize} className="icon glow-icon-on-hover" />
                                 Bootstrap
                             </div>
                             <div className="flex flex-col items-center text-xs md:text-sm lg:text-base">
                                 <BiLogoTailwindCss size={iconsSize} className="icon glow-icon-on-hover" />
                                 Tailwind
+                            </div>
+                            <div className="flex flex-col items-center text-xs md:text-sm lg:text-base">
+                                <BiLogoTypescript size={iconsSize} className="icon glow-icon-on-hover" />
+                                TypeScript
                             </div>
                             <div className="flex flex-col items-center text-xs md:text-sm lg:text-base">
                                 <TbBrandNextjs size={iconsSize} className="icon glow-icon-on-hover" />
@@ -181,8 +187,8 @@ function DSResume() {
   
 
         ),
-        interests: 'Interests',
-        credentials: 'Certifications'
+        interests: 'Under Construction',
+        credentials: 'Under Construction'
     };
 
     return (
