@@ -1,10 +1,12 @@
 // HomePage.tsx
-import React, { useState } from 'react';
-import { motion, AnimatePresence, useAnimation } from 'framer-motion';
+import React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Resume from '../components/Resume';
 import DSResume from '../components/DSResume';
 import RSHours from '@/components/RSHours';
 import DSHours from '@/components/DSHours';
+import WebsiteDoc from '@/components/WebsiteDoc';
+import AnimationDoc from '@/components/AnimationDoc';
 
 type HomePageProps = {
     resumeType: string;
@@ -22,7 +24,7 @@ const HomePage: React.FC<HomePageProps> = ({ resumeType, showRS }) => {
             {/* Resume */}
             <div className=" grid grid-cols-12 gap-4 mt-10 ">
                 <div className="col-start-4 col-end-12">
-                    
+
                     {/* Resume Animation */}
                     <AnimatePresence mode='wait'>
                         {resumeType === 'research' ? (
@@ -50,6 +52,12 @@ const HomePage: React.FC<HomePageProps> = ({ resumeType, showRS }) => {
                 </div>
             </div>
 
+            {/* Website Documentation */}
+            <WebsiteDoc isDarkTheme={!showRS}/>
+
+            {/* Animation Documentation */}
+            <AnimationDoc isDarkTheme={!showRS}/>
+
             {/* Hours */}
             <AnimatePresence mode='wait'>
                 {showRS ? (
@@ -74,7 +82,7 @@ const HomePage: React.FC<HomePageProps> = ({ resumeType, showRS }) => {
                     </motion.div>
                 )}
             </AnimatePresence>
-            
+
         </>
     );
 }

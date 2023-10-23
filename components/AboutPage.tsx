@@ -8,7 +8,6 @@ type AboutPageProps = {
 const AboutPage: React.FC<AboutPageProps> = ({ isDarkTheme }) => {
     const bgColor = isDarkTheme ? '#2C2F31' : 'rgb(219 234 254)';
     const textColor = isDarkTheme ? 'text-gray-300' : 'text-blue-500';
-    const bgColorClass = isDarkTheme ? 'bg-gray-500' : 'bg-blue-300';
     const blanketColor = isDarkTheme ? '#3E4143' : 'rgb(191 219 254)';
 
     return (
@@ -19,12 +18,12 @@ const AboutPage: React.FC<AboutPageProps> = ({ isDarkTheme }) => {
 
                 {/* Add Pictures */}
                 <div className="center-content certs-container ">
-                    <div className={`${bgColorClass} p-5 rounded-md`}>
+                    <div style ={{background:`${blanketColor}`}} className={`p-5 rounded-md`}>
                         Picture of me
                     </div>
                 </div>
                 <div style ={{background:`${blanketColor}`}}className={`m-2 rounded-md p-2`}>
-                    <div className={`text-left mx-3 ${textColor} text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl`}>
+                    <p className={`text-left mx-3 ${textColor} text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl`}>
                         &emsp; Hello, welcome to my website! My name is Jeff, and I am currently working as a Research Assistant at Boston Children's Hospital.
                         I graduated from Vanderbilt University with B.S. in Chemistry as a part of my pre-medical track. But after going through some life-altering
                         events, I have picked up a new passion for data science and machine learning.
@@ -50,7 +49,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ isDarkTheme }) => {
                         &emsp;
                         If you have any suggestions or inquiries about my projects, please feel free to contact me through the contact form below!
                         Thank you very much for your time!
-                    </div>
+                    </p>
                 </div>
             </div>
         </div>
