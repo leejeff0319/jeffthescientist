@@ -22,7 +22,7 @@ const WebsiteDocPage: React.FC<WebsiteDocPageProps> = ({ isDarkTheme }) => {
                 <div className="flex justify-between items-start">
                     {/* Image */}
                     <div style={{ background: `${blanketColor}`, width:'700px'}} className="flex p-3 rounded-md ml-2">
-                        <img src={`${docImage}`} className="w-full h-auto" />
+                        <img src={`${docImage}`} width="700" height="500" alt="Web doc Thumbnail"/>
                     </div>
 
                     {/* Text */}

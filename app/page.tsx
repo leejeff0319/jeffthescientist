@@ -46,99 +46,62 @@ export default function Home() {
     exit: { opacity: 0, transition: { duration: 0.5 } }
   };
 
-  const setSun = () => {
-    // Calculate the amount the Sun needs to move to go off-screen
-    const sunElement = document.querySelector('.sun') as HTMLElement;
-    if (!sunElement) {
-      return;
+  const themeConfig = {
+    light: {
+      role: "Research",
+      time: "by day",
+      badge: "RS",
+      buttonText: "Data Science",
+      buttonColor: "blue-500",
+      bodyClass: 'body-blue-100',
+      resumeType: 'research',
+      showRS: true
+    },
+    dark: {
+      role: "Data",
+      time: "by night",
+      badge: "DS",
+      buttonText: "Research Science",
+      buttonColor: "black",
+      bodyClass: 'body-gray-800',
+      resumeType: 'dataScience',
+      showRS: false
     }
-    const moveDistance = window.innerWidth + sunElement.offsetWidth;
+  };
+
+  const toggleAnimation = (activate: boolean) => {
+    const moveDistance = window.innerWidth + (activate ? (document.querySelector('.moon') as HTMLElement)?.offsetWidth ?? 0 : (document.querySelector('.sun') as HTMLElement)?.offsetWidth ?? 0);
 
     sunControls.start({
-      x: -moveDistance,
-      backgroundColor: "#F87171",
-      transition: {
-        duration: 4
-      }
+      x: activate ? -moveDistance : "0vw",
+      backgroundColor: activate ? "#F87171" : "#FEF08A",
+      transition: { duration: activate ? 4 : 1 }
     });
-  }
-
-  const setMoon = () => {
-    // Calculate the starting position for the Moon to be off-screen
-    const moonElement = document.querySelector('.moon') as HTMLElement;
-    if (!moonElement) {
-      return;
-    }
-    const moveDistance = window.innerWidth + moonElement.offsetWidth;
 
     moonControls.start({
-      x: window.innerWidth - moveDistance,
-      transition: {
-        duration: 1
-      }
+      x: activate ? window.innerWidth - moveDistance : "100vw",
+      transition: { duration: 1 }
     });
-  }
+  };
 
-
-  {/*Animations*/ }
   const handleButtonClick = () => {
     setIsButtonDisabled(true);
     setIsDarkTheme(prev => !prev);
+    const config = isActivated ? themeConfig.light : themeConfig.dark;
+    toggleAnimation(!isActivated);
+    setBackgroundPosition(isActivated ? '0% 0%' : '85% 0%');
+    setNavbarPosition(isActivated ? '0%' : '85%');
+    setRole(config.role);
+    setTime(config.time);
+    setCurrentBadge(config.badge);
+    setButtonText(config.buttonText);
+    setButtonColor(config.buttonColor);
+    document.body.classList.remove(themeConfig.light.bodyClass, themeConfig.dark.bodyClass);
+    document.body.classList.add(config.bodyClass);
+    setResumeType(config.resumeType);
+    setShowRS(config.showRS);
+    setIsActivated(!isActivated);
 
-    if (isActivated) {
-      // Play reverse animations
-      setBackgroundPosition('0% 0%');
-      setNavbarPosition('0%');
-
-      sunControls.start({
-        x: "0vw",
-        backgroundColor: "#FEF08A", // revert to the original sun color
-        transition: {
-          duration: 1
-        }
-      });
-      moonControls.start({
-        x: "100vw",
-        transition: {
-          duration: 1 // same as your original duration
-        }
-      });
-
-      // Set to initial values
-      setRole("Research");
-      setTime("by day");
-      setCurrentBadge('RS');
-      setButtonText("Data Science");
-      setButtonColor("blue-500");
-      document.body.classList.remove('body-gray-800');
-      document.body.classList.add('body-blue-100');
-      setResumeType('research');
-      setShowRS(true);
-
-      setIsActivated(false);
-    }
-
-    else {
-      setBackgroundPosition('85% 0%');
-      setNavbarPosition('85%');
-      setSun();
-      setMoon();
-
-      setRole(prevRole => prevRole === "Research" ? "Data" : "Research");
-      setTime(prevTime => prevTime === "by day" ? "by night" : "by day");
-
-      setCurrentBadge(prevBadge => (prevBadge === 'RS' ? 'DS' : 'RS'));
-
-      setButtonText("Research Science");
-      setButtonColor("black");
-
-      document.body.classList.remove('body-blue-100');
-      document.body.classList.add('body-gray-800');
-      setResumeType('dataScience');
-      setShowRS(false);
-
-      setIsActivated(true);
-    }
     setTimeout(() => {
       setIsButtonDisabled(false);
     }, 1000);
@@ -150,140 +113,136 @@ export default function Home() {
 
   return (
     <div>
-      <div className="relative"  >
+      <div className='role-container absolute z-50'>
+        {/* Scientist Animation */}
+        <AnimatePresence>
+          <Scientist role={role} time={time} key={role} />
+        </AnimatePresence>
+      </div>
 
-        <div className='role-container absolute z-50'>
-          {/* Scientist Animation */}
-          <AnimatePresence>
-            <Scientist role={role} time={time} key={role} />
-          </AnimatePresence>
-        </div>
+      {/* Render the Sun and Night components */}
+      <Sun control={sunControls} />
+      <Moon control={moonControls} initial={{ x: "60vw" }} />
+      <Night backgroundPosition={backgroundPosition} />
 
-        {/* Render the Sun and Night components */}
-        <Sun control={sunControls} />
-        <Moon control={moonControls} initial={{ x: "100vw" }} />
-        <Night backgroundPosition={backgroundPosition} />
+      {/* Navbar */}
+      <Navbar navbarPosition={navbarPosition} onPageChange={handlePageChange} />
 
-        {/* Navbar */}
-        <div className='flex'>
-          <Navbar navbarPosition={navbarPosition} onPageChange={handlePageChange} />
-        </div>
-
-        {/* Badge Container */}
-        <div className="badge-container absolute top-100">
-          {/* Badge Animations */}
-          <AnimatePresence mode='wait'>
-            {currentBadge === 'RS' ? (
-              <motion.div
-                key="RS"  // <-- Add this
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                variants={fadeVariants}
-              >
-                <RSBadge />
-              </motion.div>
-            ) : (
-              <motion.div
-                key="DS"  // <-- Add this
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                variants={fadeVariants}
-              >
-                <DSBadge />
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* "Download CV" Button */}
-          <div className='relative top-5 ml-16'>
-            <a href={isActivated ? "/path-to-night-cv.pdf" : "/path-to-day-cv.pdf"}
-              download
-              className={` ${buttonClass}`}>
-              Download CV
-            </a>
-          </div>
-        </div>
-
-        {/* Load Home Page */}
+      {/* Badge Container */}
+      <div className="badge-container absolute top-100">
+        {/* Badge Animations */}
         <AnimatePresence mode='wait'>
-          {currentPage === "home" && (
+          {currentBadge === 'RS' ? (
             <motion.div
-              key="homePage"
-              variants={fadeVariants}
-              initial="hidden"
-              animate="visible"
+              key="RS"  // <-- Add this
+              initial="initial"
+              animate="animate"
               exit="exit"
+              variants={fadeVariants}
             >
-              <HomePage resumeType={resumeType} showRS={showRS} />
+              <RSBadge />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="DS"  // <-- Add this
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={fadeVariants}
+            >
+              <DSBadge />
             </motion.div>
           )}
-
-          {currentPage === "about" && (
-            <motion.div
-              key="aboutPage"
-              variants={fadeVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            >
-              <AboutPage isDarkTheme={isDarkTheme} />
-            </motion.div>
-          )}
-
-          {currentPage === "projects" && (
-            <motion.div
-              key="projectsPage"
-              variants={fadeVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            >
-              <ProjectsPage isDarkTheme={isDarkTheme} />
-            </motion.div>
-          )}
-
-          {currentPage === "notes" && (
-            <motion.div
-              key="projectsPage"
-              variants={fadeVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            >
-              <NotesPage isDarkTheme={isDarkTheme} />
-            </motion.div>
-          )}
-
-          {currentPage === "certifications" && (
-            <motion.div
-              key="certsPage"
-              variants={fadeVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            >
-              <CertsPage isDarkTheme={isDarkTheme} />
-            </motion.div>
-          )}
-
         </AnimatePresence>
 
-        {/* Feedback Footer */}
-        <ContactFooter isDark={isActivated} />
-
-        {/* Animation Button */}
-        <button
-          onClick={handleButtonClick}
-          disabled={isButtonDisabled}
-          className={`h-20 w-10 fixed top-1/4 right-0 z-50 text-white p-1 rounded-md text-xs flex items-center justify-center ${buttonColor === 'blue-500' ? 'bg-blue-500' : 'bg-black'}`}
-        >
-          <span className="transform -rotate-90">{buttonText}</span>
-        </button>
-
+        {/* "Download CV" Button */}
+        <div className='relative top-5 ml-16'>
+          <a href={isActivated ? "/path-to-night-cv.pdf" : "/path-to-day-cv.pdf"}
+            download
+            className={` ${buttonClass}`}>
+            Download CV
+          </a>
+        </div>
       </div>
+
+      {/* Load Home Page */}
+      <AnimatePresence mode='wait'>
+        {currentPage === "home" && (
+          <motion.div
+            key="homePage"
+            variants={fadeVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            <HomePage resumeType={resumeType} showRS={showRS} />
+          </motion.div>
+        )}
+
+        {currentPage === "about" && (
+          <motion.div
+            key="aboutPage"
+            variants={fadeVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            <AboutPage isDarkTheme={isDarkTheme} />
+          </motion.div>
+        )}
+
+        {currentPage === "projects" && (
+          <motion.div
+            key="projectsPage"
+            variants={fadeVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            <ProjectsPage isDarkTheme={isDarkTheme} />
+          </motion.div>
+        )}
+
+        {currentPage === "notes" && (
+          <motion.div
+            key="projectsPage"
+            variants={fadeVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            <NotesPage isDarkTheme={isDarkTheme} />
+          </motion.div>
+        )}
+
+        {currentPage === "certifications" && (
+          <motion.div
+            key="certsPage"
+            variants={fadeVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            <CertsPage isDarkTheme={isDarkTheme} />
+          </motion.div>
+        )}
+
+      </AnimatePresence>
+
+      {/* Feedback Footer */}
+      <ContactFooter isDark={isActivated} />
+
+      {/* Animation Button */}
+      <button
+        onClick={handleButtonClick}
+        disabled={isButtonDisabled}
+        className={`h-20 w-10 fixed top-1/4 right-0 z-50 text-white p-1 rounded-md text-xs flex items-center justify-center ${buttonColor === 'blue-500' ? 'bg-blue-500' : 'bg-black'}`}
+      >
+        <span className="transform -rotate-90">{buttonText}</span>
+      </button>
+
     </div>
+
 
 
   )

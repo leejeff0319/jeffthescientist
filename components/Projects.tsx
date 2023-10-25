@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+// import { GiSnakeTotem }from '../assets/images/GiSnakeTotem.png';
 
 type ProjectsProps = {
     isDarkTheme: boolean;

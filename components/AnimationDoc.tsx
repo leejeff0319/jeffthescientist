@@ -1,6 +1,7 @@
 // AnimationDocPage.tsx
 import React from 'react';
 
+
 type AnimationDocPageProps = {
     isDarkTheme: boolean;
 };
@@ -31,7 +32,7 @@ const AnimationDocPage: React.FC<AnimationDocPageProps> = ({ isDarkTheme }) => {
                     </div>
                     {/* Image */}
                     <div style={{ background: `${blanketColor}`,width:'700px'}} className="flex p-3 rounded-md ml-2">
-                        <img src={`${aniImage}`} className="w-full h-auto" />
+                        <img src={`${aniImage}`} width="700" height="500" alt="Animation Journey Thumbnail"/>
                     </div>
 
                     
