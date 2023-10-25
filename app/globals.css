@@ -566,25 +566,38 @@ body {
 :root {
     --bg-color: rgb(20, 20, 20);
     --card-color: rgb(23, 23, 23);
+    --hover-before: rgba(255, 255, 255, 0.06);
+    --hover-after: rgba(255, 255, 255, 0.4);
+    --card-i: rgb(240, 240, 240);
+    --card-title: rgba(255, 255, 255, 0.5);
 }
 
 .project-body {
     align-items: center;
-    background-color: var(--bg-color);
-    display: flex;
-    height: 100vh;
+    display: grid;
+    grid-auto-flow: column;
+    height: auto;
     justify-content: center;
     margin: 0px;
-    overflow: hidden;
     padding: 0px;
+
+    /* Horizontal Scroll */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    overscroll-behavior-inline: contain;
 }
 
+
 #cards {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, 1fr);
     gap: 8px;
+    margin-left: 10px;
+    margin-bottom: 10px;
     max-width: 916px;
     width: calc(100% - 20px);
+
 }
 
 #cards:hover>.card::after {
@@ -592,7 +605,7 @@ body {
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.1);
+    /* background-color: rgba(255, 255, 255, 0.1); */
     border-radius: 10px;
     cursor: pointer;
     display: flex;
@@ -621,14 +634,14 @@ body {
 
 .card::before {
     background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
-            rgba(255, 255, 255, 0.06),
+            var(--hover-before),
             transparent 40%);
     z-index: 3;
 }
 
 .card::after {
     background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
-            rgba(255, 255, 255, 0.4),
+            var(--hover-after),
             transparent 40%);
     z-index: 1;
 }
@@ -659,7 +672,7 @@ span {
 }
 
 i {
-    color: rgb(240, 240, 240);
+    color: var(--card-i);
 }
 
 .card-image {
@@ -701,17 +714,16 @@ i {
 }
 
 .card-info-title>h4 {
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--card-title);
     font-size: 0.85em;
     margin-top: 8px;
 }
 
 /* responsiveness */
 
-@media(max-width: 1000px) {
+@media(max-width: 1200px) {
     .project-body {
-        align-items: flex-start;
-        overflow: auto;
+        justify-content: left;
     }
 
     #cards {
@@ -720,14 +732,15 @@ i {
     }
 
     .card {
-        flex-shrink: 1;
-        width: calc(50% - 4px);
+        width: calc(1.75 * 150px);
+        height: calc(1.75 * 130px);
     }
 }
 
-@media(max-width: 500px) {
+@media(max-width: 800px) {
     .card {
-        height: 180px;
+        width: calc(1.25 * 150px);
+        height: calc(1.25 * 130px);
     }
 
     .card-image {
@@ -756,14 +769,42 @@ i {
     }
 }
 
-@media(max-width: 320px) {
+@media(max-width: 650px) {
     .card {
-        width: 100%;
+        width: calc(1 * 150px);
+        height: calc(1 * 130px);
     }
 }
 
+/* Customize website's scrollbar like Mac OS
+Not supported in Firefox and IE */
+
+/* Vertical Scroll */
+/* total width */
+body::-webkit-scrollbar {
+    background-color: transparent;
+    width: 6px;
+}
+
+/* background of the scrollbar except button or resizer */
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* scrollbar itself */
+body::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+    border: 4px solid transparent;
+}
+
+/* set button(top and bottom of the scrollbar) */
+body::-webkit-scrollbar-button {
+    display: none;
+}
+
 /* Horizontal Scroll */
-.scrolling-container {
-    overflow-x: auto;
-    white-space: nowrap;
+/* total width */
+.project-body::-webkit-scrollbar {
+    background-color: transparent;
 }
