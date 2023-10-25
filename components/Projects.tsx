@@ -185,6 +185,9 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkTheme }) => {
                     <div className='card'>
                         <div className='card-content'></div>
                     </div>
+                    <div className='card'>
+                        <div className='card-content'></div>
+                    </div>
                 </div>
             </div>
         </div>

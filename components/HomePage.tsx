@@ -53,10 +53,11 @@ const HomePage: React.FC<HomePageProps> = ({ resumeType, showRS }) => {
             </div>
 
             {/* Website Documentation */}
-            <WebsiteDoc isDarkTheme={!showRS}/>
+            <div id="websiteSlide"><WebsiteDoc isDarkTheme={!showRS}/></div>
+            
 
             {/* Animation Documentation */}
-            <AnimationDoc isDarkTheme={!showRS}/>
+            <div id="animationSlide"><AnimationDoc isDarkTheme={!showRS}/></div>
 
             {/* Hours */}
             <AnimatePresence mode='wait'>

@@ -808,3 +808,42 @@ body::-webkit-scrollbar-button {
 .project-body::-webkit-scrollbar {
     background-color: transparent;
 }
+
+
+/* HomePage Animation */
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#websiteSlide {
+    animation: slideFromLeft linear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
+#animationSlide {
+    animation: slideFromRight linear;
+    animation-timeline: view(); ;
+    animation-range: entry;
+}

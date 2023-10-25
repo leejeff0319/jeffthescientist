@@ -145,7 +145,7 @@ function Resume() {
 
                 <div className="flex justify-between mb-2 text-xs sm:text-base md:lg lg:text-lg 2xl:text-2xl">
                     <span className="text-md"><strong>Alpha Phi Omega</strong>- Pledge Class President</span>
-                    <span className="text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">10/2022- 05/2023</span>
+                    <span className="text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">10/2021- 05/2023</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">
                     <li>Served as the <strong>elected Pledge Class President</strong> by working alongside the other board members to <strong>coordinate community service & bonding events</strong> for the pledges and brothers</li>
