@@ -14,9 +14,19 @@ const Certs: React.FC<CertsProps> = ({ isDarkTheme }) => {
             <div className="certs-container-right ">
                 <div className={`${bgColorClass} p-5 rounded-md flex`}> {/*add skills here*/}
                     <div className="hero ">
-                        <img className="logo" src="" alt="" />
-                        <img className="front-image" src="GADA_fi_transparent.png" alt="GADA front image" />
-                        <img className="bg-certs" src="GADA.png" alt="GADA certificate" />
+                        <Image className="logo" src="" alt="" />
+                        <Image className="front-image"
+                            src="/GADA_fi_transparent.png"
+                            width={600}
+                            height={300}
+                            alt="Google Advanced Data Analytics front image"
+                        />
+                        <Image className="bg-certs"
+                            src="/GADA.png"
+                            width={600}
+                            height={300}
+                            alt="Google Advanced Data Analytics certificate"
+                        />
                     </div>
                 </div>
             </div>
@@ -24,9 +34,17 @@ const Certs: React.FC<CertsProps> = ({ isDarkTheme }) => {
             <div className="certs-container">
                 <div className={`${bgColorClass} p-5 rounded-md`}> {/*add skills here*/}
                     <div className="hero ">
-                        <img className="logo" src="" alt="" />
-                        <img className="front-image" src="p4e_fi.png" alt="" width='400px' />
-                        <img className="bg-certs" src="p4e.png" alt="" />
+                        <Image className="logo" src="" alt="" />
+                        <Image className="front-image"
+                            src="/p4e_fi.png"
+                            width={600}
+                            height={300}
+                            alt="Python for Everybody Specialization front image" />
+                        <Image className="bg-certs"
+                            src="/p4e.png"
+                            width={600}
+                            height={300}
+                            alt="Python for Everybody Specialization certificate" />
                     </div>
                 </div>
             </div>
@@ -34,9 +52,19 @@ const Certs: React.FC<CertsProps> = ({ isDarkTheme }) => {
             <div className="certs-container-right">
                 <div className={`${bgColorClass} p-5 rounded-md`}> {/*add skills here*/}
                     <div className="hero  ">
-                        <img className="logo" src="" alt="" />
-                        <img className="front-image" src="GDA_fi_transparent.png" alt="" />
-                        <img className="bg-certs" src="GDA.png" alt="" />
+                        <Image className="logo" src="" alt="" />
+                        <Image className="front-image"
+                            src="/GDA_fi_transparent.png"
+                            width={600}
+                            height={300}
+                            alt="Google Data Analytics front image"
+                        />
+                        <Image className="bg-certs"
+                            src="/GDA.png"
+                            width={600}
+                            height={300}
+                            alt="Google Data Analytics Certificate"
+                        />
                     </div>
                 </div>
             </div>

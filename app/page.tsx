@@ -33,12 +33,28 @@ export default function Home() {
   const [currentPage, setCurrentPage] = useState("home");
   const [isDarkTheme, setIsDarkTheme] = useState(false);
 
+  // Set the inital background color of the body
   useEffect(() => {
     document.body.classList.add('body-blue-100');
     return () => {
       document.body.classList.remove('body-blue-100');
     };
   }, []);
+
+  // Loading Animation
+  // const [isLoading, setIsLoading] = useState(true);
+  // useEffect(() => {
+  //   // Simulate component loading time with a timeout.
+  //   // You can adjust the duration as needed.
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 5000); // 5 second loading time
+  // }, []);
+  // // While loading, display the animation.
+  // if (isLoading) {
+  //   return <div className="loader">Loading animation here...</div>;
+  // }
+
 
   const fadeVariants = {
     initial: { opacity: 0 },
@@ -110,6 +126,8 @@ export default function Home() {
   const handlePageChange = (page: string) => {
     setCurrentPage(page);
   };
+
+  
 
   return (
     <div>

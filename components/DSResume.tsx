@@ -25,6 +25,7 @@ import {
 import { FaPython } from 'react-icons/fa';
 import { PiFileSql } from 'react-icons/pi';
 import { ImStatsDots } from 'react-icons/im';
+import Image from 'next/image';
 
 
 function DSResume() {
@@ -55,7 +56,11 @@ function DSResume() {
             <div>
                 <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2 text-xxs sm:text-md md:text-xl lg:text-xl 2xl:text-2xl">
-                        <img src="Gvandy.png" alt="Vanderbilt University" className="w-12 h-8" />
+                        <Image 
+                        src="/Gvandy.png"
+                        width={50}
+                        height={50} 
+                        alt="Vanderbilt University Logo" className="w-12 h-8" />
                         <span><strong>Vanderbilt University</strong>- B.S. Chemistry</span>
                     </div>
                     <div className="text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">
