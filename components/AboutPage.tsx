@@ -24,7 +24,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ isDarkTheme }) => {
                 </div>
                 <div style ={{background:`${blanketColor}`}}className={`m-2 rounded-md p-2`}>
                     <p className={`text-left mx-3 ${textColor} text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl`}>
-                        &emsp; Hello, welcome to my website! My name is Jeff, and I am currently working as a Research Assistant at Boston Children's Hospital.
+                        &emsp; Hello, welcome to my website! My name is Jeff, and I am currently working as a Research Assistant at Boston Children&#39;s Hospital.
                         I graduated from Vanderbilt University with B.S. in Chemistry as a part of my pre-medical track. But after going through some life-altering
                         events, I have picked up a new passion for data science and machine learning.
                         <br />

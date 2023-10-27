@@ -1,9 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { LazyMotion, domAnimation, m, AnimatePresence} from 'framer-motion';
 
 interface ScientistProps {
-  role: string;
-  time: string;
+  isActivated:boolean;
 }
 
 const fadeVariants = {
@@ -18,37 +17,43 @@ const slideVariants = {
   exit: { x: -50, opacity: 0 }    // exit to the left
 };
 
-const Scientist: React.FC<ScientistProps> = ({ role, time }) => {
-  // Compute left positioning based on word width
+const Scientist: React.FC<ScientistProps> = ({ isActivated }) => {
+  const role = isActivated ? "Data" : "Research";
+  const time = isActivated ? "by night" : "by day";
   const roleClass = role === 'Data' ? 'left-48' : 'left-20';
 
   return (
     <>
+    <LazyMotion features={domAnimation}>
+    <AnimatePresence mode='wait'>
       {/* Sliding Animation for Role */}
-      <motion.span
+      <m.span
+      key={`${role}-${time}`}
         initial="hidden"
         animate="visible"
         exit="exit"
         variants={slideVariants}
-        transition={{ duration: 1 }}
-        style={{ left:'', top:''}}
+        transition={{ duration: 0.5 }}
         className={`absolute top-64 ${roleClass} text-blue-700 bg-transparent text-5xl text-shadow font-bold`}>
         {role}
-      </motion.span>
-      <span className="absolute top-64 left-80 text-blue-700 bg-transparent text-5xl text-shadow font-bold">
-        Scientist
-      </span>
+      </m.span>
+    
       {/* Fading Animation for Time */}
-      <motion.span
+      <m.span
         initial="hidden"
         animate="visible"
         exit="exit"
         variants={fadeVariants}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.5 }}
         className="absolute top-80 left-96 text-blue-700 bg-transparent text-3xl text-shadow font-bold whitespace-nowrap"
       >
         {time}
-      </motion.span>
+      </m.span>
+      </AnimatePresence>
+      </LazyMotion>
+      <span className="absolute top-64 left-80 text-blue-700 bg-transparent text-5xl text-shadow font-bold">
+        Scientist
+      </span>
     </>
   );
 }

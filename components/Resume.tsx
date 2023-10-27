@@ -22,7 +22,7 @@ function Resume() {
                 </div>
                 <ul className="list-disc pl-5 mt-1 text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">
                     <li>Co-founded <a href="https://www.cupps.org/" target="_blank" rel="noopener noreferrer" className="text-black hover:underline"><strong>CUPPS.org</strong></a></li>
-                    <li>Co-directed the <strong>“I’m Good, How Are You”</strong> Podcast</li>
+                    <li>Co-directed the <strong>“I&#39;m Good, How Are You”</strong> Podcast</li>
                     <li>Elected <strong>Pledge Class President </strong>of Alpha Phi Omega</li>
                     <li><strong>3.78 GPA</strong> during the final 3 Semesters while taking 18 credit hours and working 20+ hours/week</li>
                 </ul>
@@ -32,15 +32,15 @@ function Resume() {
         research: (
             <div>
                 <div className="flex justify-between mb-2 text-xs sm:text-base md:lg lg:text-lg 2xl:text-2xl">
-                    <span className="text-md"><strong>Dr. Zhongjie Fu's Ophthalmology Lab</strong>- Research Assistant</span>
+                    <span className="text-md"><strong>Dr. Zhongjie Fu&#39;s Ophthalmology Lab</strong>- Research Assistant</span>
                     <span className="text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">06/2023 - Present</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">
-                    <li>Boston Children's Hospital working under <strong>Dr. Zhongjie Fu</strong> and <strong>Dr. Lois Smith</strong></li>
+                    <li>Boston Children&#39;s Hospital working under <strong>Dr. Zhongjie Fu</strong> and <strong>Dr. Lois Smith</strong></li>
                     <li>Forefront of Ophthalmology research for <strong>Retinopathy of Prematurity</strong> and Age-related Macular Degeneration </li>
                 </ul>
                 <div className="flex justify-between mb-2 text-xs sm:text-base md:lg lg:text-lg 2xl:text-2xl">
-                    <span className="text-md"><strong>Dr. Michael P. Stone’s Biophysical Chemistry Lab</strong>- Research Assistant</span>
+                    <span className="text-md"><strong>Dr. Michael P. Stone&#39;s Biophysical Chemistry Lab</strong>- Research Assistant</span>
                     <span className="text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">08/2021 - 05/2023</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">
@@ -50,7 +50,7 @@ function Resume() {
                 </ul>
 
                 <div className="flex justify-between mb-2 text-xs sm:text-base md:lg lg:text-lg 2xl:text-2xl">
-                    <span className="text-md"><strong>Dr. John A. McLean’s Mass Spectrometry Lab</strong>- Research Assistant</span>
+                    <span className="text-md"><strong>Dr. John A. McLean&#39;s Mass Spectrometry Lab</strong>- Research Assistant</span>
                     <span className="text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">01/2023 - 05/2023</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">
@@ -69,11 +69,11 @@ function Resume() {
                 </ul>
 
                 <div className="flex justify-between mb-2 text-xs sm:text-base md:lg lg:text-lg 2xl:text-2xl">
-                    <span className="text-md"><strong>Dr. Jessika C. Boles’s Pyschology Lab</strong>- Research Assistant</span>
+                    <span className="text-md"><strong>Dr. Jessika C. Boles&#39;s Pyschology Lab</strong>- Research Assistant</span>
                     <span className="text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">02/2023 - Present</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">
-                    <li>Conducting a study on the general medical practitioners’ knowledge on <strong>mental health resources that are available for patients</strong></li>
+                    <li>Conducting a study on the general medical practitioners&#39; knowledge on <strong>mental health resources that are available for patients</strong></li>
                 </ul>
             </div>
         ),
@@ -131,7 +131,7 @@ function Resume() {
                 </ul>
 
                 <div className="flex justify-between mb-2 text-xs sm:text-base md:lg lg:text-lg 2xl:text-2xl">
-                    <span className="text-md"><strong>“I’m Good, How Are You?” Podcast</strong>- Co-director</span>
+                    <span className="text-md"><strong>“I&#39;m Good, How Are You?” Podcast</strong>- Co-director</span>
                     <span className="text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">09/2022 - Present</span>
                 </div>
                 <ul className="list-disc pl-5 mb-4 text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">

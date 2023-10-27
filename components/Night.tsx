@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
 interface NightProps {
-  backgroundPosition: string;
+  isActivated: boolean;
 }
 
-function Night({ backgroundPosition }: NightProps) {
-    const isNight = backgroundPosition === '85% 0%';
+function Night({ isActivated }: NightProps) {
+    const backgroundPosition = isActivated ? '85% 0%' : '0% 0%';
     const cloudSpacing = 100 / 3;
 
 
@@ -33,12 +33,12 @@ function Night({ backgroundPosition }: NightProps) {
     
             {/* Stars */}
             {starsPositions.map((pos, index) => (
-                <div key={index} className={`star ${isNight ? 'star-fade-in' : ''}`} style={pos}></div>
+                <div key={index} className={`star ${isActivated ? 'star-fade-in' : ''}`} style={pos}></div>
             ))}
     
             {/* Clouds */}
             {cloudsPositions.map((pos, index) => {
-                const translateX = isNight ? `${Math.random() * 50 - 25}vw` : '0vw';
+                const translateX = isActivated ? `${Math.random() * 50 - 25}vw` : '0vw';
                 return (
                     <div key={index} className="cloud" style={{ ...pos, transform: `translateX(${translateX})` }}></div>
                 );

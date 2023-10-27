@@ -2,10 +2,11 @@
 import React from 'react';
 
 interface NavbarProps {
-  navbarPosition: string; // Ensure it's named navbarPosition
+  isActivated: boolean;
 }
 
-function Navbar({ navbarPosition, onPageChange }: NavbarProps & { onPageChange: (page: string) => void }) {
+function Navbar({ isActivated , onPageChange }: NavbarProps & { onPageChange: (page: string) => void }) {
+  const navbarPosition = isActivated ? '85%' : '0%';
 
   return (
     <div className="navbar pb-2 top-0 z-20 w-full">
