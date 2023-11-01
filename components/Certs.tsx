@@ -14,7 +14,7 @@ const Certs: React.FC<CertsProps> = ({ isDarkTheme }) => {
             <div className="certs-container-right ">
                 <div className={`${bgColorClass} p-5 rounded-md flex`}> {/*add skills here*/}
                     <div className="hero ">
-                        <Image className="logo" src="" alt="" />
+                        {/* <Image className="logo" src="" alt="" /> */}
                         <Image className="front-image"
                             src="/GADA_fi_transparent.png"
                             width={600}
@@ -34,7 +34,7 @@ const Certs: React.FC<CertsProps> = ({ isDarkTheme }) => {
             <div className="certs-container">
                 <div className={`${bgColorClass} p-5 rounded-md`}> {/*add skills here*/}
                     <div className="hero ">
-                        <Image className="logo" src="" alt="" />
+                        {/* <Image className="logo" src="" alt="" /> */}
                         <Image className="front-image"
                             src="/p4e_fi.png"
                             width={600}
@@ -52,7 +52,7 @@ const Certs: React.FC<CertsProps> = ({ isDarkTheme }) => {
             <div className="certs-container-right">
                 <div className={`${bgColorClass} p-5 rounded-md`}> {/*add skills here*/}
                     <div className="hero  ">
-                        <Image className="logo" src="" alt="" />
+                        {/* <Image className="logo" src="" alt="" /> */}
                         <Image className="front-image"
                             src="/GDA_fi_transparent.png"
                             width={600}

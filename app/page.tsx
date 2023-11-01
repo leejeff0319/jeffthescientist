@@ -17,9 +17,7 @@ import Button from '@/components/Button';
 
 export default function Home() {
   const [isActivated, setIsActivated] = useState(false);
-
   const resumeType = isActivated ? "dataScience" : "research";
-
   const buttonClass = isActivated ? 'night-btn' : 'day-btn';
   const [currentPage, setCurrentPage] = useState("home");
 
