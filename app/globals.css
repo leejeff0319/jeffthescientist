@@ -714,6 +714,8 @@ i {
 }
 
 .card-info-title>h3 {
+    width: 100%;
+    text-align: center;
     font-size: 1.1em;
     line-height: 20px;
 }
@@ -725,7 +727,6 @@ i {
 }
 
 /* responsiveness */
-
 @media(max-width: 1200px) {
     .project-body {
         justify-content: left;
@@ -780,9 +781,6 @@ i {
         height: calc(1 * 130px);
     }
 }
-
-/* Customize website's scrollbar like Mac OS
-Not supported in Firefox and IE */
 
 /* Vertical Scroll */
 /* total width */
@@ -851,4 +849,20 @@ body::-webkit-scrollbar-button {
     animation: slideFromRight linear;
     animation-timeline: view(); ;
     animation-range: entry;
+}
+
+/* MNIST CSS */
+.MNIST-body{
+    background-color: #181a1b;
+    color: white;
+    overflow-x: hidden;
+}
+
+.erase-button{
+    background-color: #2C2F31;
+    color: white;
+    border-radius: 5px;
+    padding: 7px;
+    border: none;
+    cursor: pointer;
 }

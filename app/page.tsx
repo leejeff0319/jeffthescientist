@@ -1,19 +1,19 @@
 "use client";
 import React, { useState } from 'react';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
-import Sun from '../components/Sun';
-import Moon from '../components//Moon'
-import Night from '../components//Night';
-import Scientist from '../components//Scientist';
-import Navbar from '../components//Navbar'
-import Badges from '../components//Badges';
-import ContactFooter from '@/components/ContactFooter';
-import HomePage from '@/components/HomePage';
-import CertsPage from '@/components/CertsPage';
-import ProjectsPage from '@/components/ProjectsPage';
-import AboutPage from '@/components/AboutPage';
-import NotesPage from '@/components/NotesPage';
-import Button from '@/components/Button';
+import Sun from '../components/Website/Sun';
+import Moon from '../components/Website//Moon'
+import Night from '../components/Website//Night';
+import Scientist from '../components/Website//Scientist';
+import Navbar from '../components/Website//Navbar'
+import Badges from '../components/Website//Badges';
+import ContactFooter from '@/components/Website/ContactFooter';
+import HomePage from '@/components/Website/HomePage';
+import CertsPage from '@/components/Website/CertsPage';
+import ProjectsPage from '@/components/Website/ProjectsPage';
+import AboutPage from '@/components/Website/AboutPage';
+import NotesPage from '@/components/Website/NotesPage';
+import Button from '@/components/Website/Button';
 
 export default function Home() {
   const [isActivated, setIsActivated] = useState(false);
