@@ -5,19 +5,19 @@ const initialState = {
     gluten: true
 }
 
-export const pizzaSlice = createSlice({
-    name: 'pizza',
+export const buttonSlice = createSlice({
+    name: 'button',
     initialState,
     reducers: {
         toggleGluten: (state) => {
             state.gluten = !state.gluten
         },
-        addTopping: (stae, action) => {
+        addTopping: (state, action) => {
             state.toppings = [...state.toppings, action.payload]
         },
     },
 })
 
-export const {toggleGluten, addToppping} = pizzaSlice.actions
+export const {toggleGluten, addToppping} = buttonSlice.actions
 
-export default pizzaSlice.reducer
+export default buttonSlice.reducer
