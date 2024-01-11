@@ -15,13 +15,7 @@ import AboutPage from '@/components/Website/AboutPage';
 import NotesPage from '@/components/Website/NotesPage';
 import Button from '@/components/Website/Button';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </ Provider>
-  </React.StrictMode>.
-)
+
 export default function Home() {
   const [isActivated, setIsActivated] = useState(false);
   const resumeType = isActivated ? "dataScience" : "research";

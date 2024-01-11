@@ -11,6 +11,67 @@ const Certs: React.FC<CertsProps> = ({ isDarkTheme }) => {
 
     return (
         <div>
+            <div className="certs-container ">
+                <div className={`${bgColorClass} p-5 rounded-md flex`}> {/*add skills here*/}
+                    <div className="hero ">
+                        {/* <Image className="logo" src="" alt="" /> */}
+                        <Image className="front-image"
+                            src="/TensorFlow_fi.png"
+                            width={600}
+                            height={300}
+                            alt="deep learning front-image"
+                        />
+                        <Image className="bg-certs"
+                            src="/TF.png"
+                            width={600}
+                            height={300}
+                            alt="TensorFlow Developer Certificate"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <div className="certs-container-right ">
+                <div className={`${bgColorClass} p-5 rounded-md flex`}> {/*add skills here*/}
+                    <div className="hero ">
+                        {/* <Image className="logo" src="" alt="" /> */}
+                        <Image className="front-image"
+                            src="/META_BE_fi.png"
+                            width={600}
+                            height={300}
+                            alt="backend front image"
+                        />
+                        <Image className="bg-certs"
+                            src="/META_BE.png"
+                            width={600}
+                            height={300}
+                            alt="Meta's back end developer certificate"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <div className="certs-container ">
+                <div className={`${bgColorClass} p-5 rounded-md flex`}> {/*add skills here*/}
+                    <div className="hero ">
+                        {/* <Image className="logo" src="" alt="" /> */}
+                        <Image className="front-image"
+                            src="/META_FE_fi.png"
+                            width={600}
+                            height={300}
+                            alt="HTML, CSS, and Javascript front image"
+                        />
+                        <Image className="bg-certs"
+                            src="/META_FE.png"
+                            width={600}
+                            height={300}
+                            alt="Meta's front end developer certificate"
+                        />
+                    </div>
+                </div>
+            </div>
+
+
             <div className="certs-container-right ">
                 <div className={`${bgColorClass} p-5 rounded-md flex`}> {/*add skills here*/}
                     <div className="hero ">
