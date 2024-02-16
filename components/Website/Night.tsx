@@ -24,7 +24,7 @@ function Night({ isActivated }: NightProps) {
             left: `${index * cloudSpacing + (Math.random() * cloudSpacing - 50)}%`
         }));
         setCloudsPositions(clouds);
-    }, []);
+    }, [cloudSpacing]);
 
     return (
         <div className="night bg-blue-100">

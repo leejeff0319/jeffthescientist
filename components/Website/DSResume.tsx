@@ -49,7 +49,7 @@ function DSResume() {
         
         // Cleanup on component unmount
         return () => window.removeEventListener('resize', updateSize);
-    }, []);
+    }, [iconsSize]);
 
     const content = {
         education: (

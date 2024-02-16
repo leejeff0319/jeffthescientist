@@ -49,7 +49,7 @@ const TensorFlowComponent: React.FC<TensorFlowComponentProps> = ({ imageData }) 
         if (imageData) {
             predict(imageData);
         }
-    }, [imageData]);
+    }, [imageData, predict]);
 
 
 

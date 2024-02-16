@@ -157,7 +157,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkTheme }) => {
                                     <i className=""> <TbSortAscendingNumbers /></i>
                                     <div className="card-info-title" >
                                         <h3>MNIST_TFJS</h3>
-                                        <h4>Handwritten Digit Recognizer built using CNN model! Will it recognize your handwriting? Let's find out!
+                                        <h4>Handwritten Digit Recognizer built using CNN model! Will it recognize your handwriting? Let&apos;s find out!
                                         </h4>
                                     </div>
                                 </div>
