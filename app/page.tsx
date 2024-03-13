@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { LazyMotion, domAnimation, m } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Sun from '../components/Website/Sun';
 import Moon from '../components/Website//Moon'
 import Night from '../components/Website//Night';
@@ -34,7 +34,6 @@ export default function Home() {
 
   return (
     <main className={isActivated ? "dark-theme" : "light-theme"}>
-      <LazyMotion features={domAnimation}>
         <div className='role-container absolute z-50'>
           {/* Scientist Animation */}
 
@@ -67,7 +66,7 @@ export default function Home() {
 
         {/* Page loader */}
         {currentPage === "home" && (
-          <m.div
+          <motion.div
             key="homePage"
             variants={fadeVariants}
             initial="hidden"
@@ -75,11 +74,11 @@ export default function Home() {
             exit="exit"
           >
             <HomePage resumeType={resumeType} showRS={!isActivated} />
-          </m.div>
+          </motion.div>
         )}
 
         {currentPage === "about" && (
-          <m.div
+          <motion.div
             key="aboutPage"
             variants={fadeVariants}
             initial="hidden"
@@ -87,11 +86,11 @@ export default function Home() {
             exit="exit"
           >
             <AboutPage isDarkTheme={isActivated} />
-          </m.div>
+          </motion.div>
         )}
 
         {currentPage === "projects" && (
-          <m.div
+          <motion.div
             key="projectsPage"
             variants={fadeVariants}
             initial="hidden"
@@ -99,11 +98,11 @@ export default function Home() {
             exit="exit"
           >
             <ProjectsPage isDarkTheme={isActivated} />
-          </m.div>
+          </motion.div>
         )}
 
         {currentPage === "notes" && (
-          <m.div
+          <motion.div
             key="projectsPage"
             variants={fadeVariants}
             initial="hidden"
@@ -111,11 +110,11 @@ export default function Home() {
             exit="exit"
           >
             <NotesPage isDarkTheme={isActivated} />
-          </m.div>
+          </motion.div>
         )}
 
         {currentPage === "certifications" && (
-          <m.div
+          <motion.div
             key="certsPage"
             variants={fadeVariants}
             initial="hidden"
@@ -123,7 +122,7 @@ export default function Home() {
             exit="exit"
           >
             <CertsPage isDarkTheme={isActivated} />
-          </m.div>
+          </motion.div>
         )}
 
         {/* Feedback Footer */}
@@ -131,7 +130,6 @@ export default function Home() {
 
         {/* Animation Button */}
         <Button isActivated={isActivated} onToggle={() => setIsActivated(prevState => !prevState)} />
-      </LazyMotion>
     </main>
 
 

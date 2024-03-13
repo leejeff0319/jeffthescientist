@@ -39,13 +39,6 @@ const AboutPage: React.FC<AboutPageProps> = ({ isDarkTheme }) => {
                         it aligns with my passion for medicine and my newfound passion for data science. I hope to be able to make a difference in the world!
                         <br />
                         <br />
-                        &emsp; My other interests lie with working with reinforced deep learning models
-                        to develop agents that can play games and solve problems. I loved playing games as a kid, especially for the sense of progression they
-                        provide. But I always find it tedious and time-consuming to grind for hours everyday. So I want to develop agents that can play
-                        games better than humans and provide me with these satisfactions of progression without me having to spend hours grinding. I am still
-                        very new and learning, but please feel free to check some of my work in this field out in my Projects page!
-                        <br />
-                        <br />
                         &emsp;
                         If you have any suggestions or inquiries about my projects, please feel free to contact me through the contact form below!
                         Thank you very much for your time!
