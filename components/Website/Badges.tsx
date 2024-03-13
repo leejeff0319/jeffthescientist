@@ -1,7 +1,7 @@
 // components/Badges.tsx
 "use client";
 import React from "react";
-import { LazyMotion, domAnimation, m, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import RSBadge from "./RSBadge";
 import DSBadge from "./DSBadge";
 
@@ -17,10 +17,9 @@ export default function Badge({ isActivated }: BadgeProps) {
   };
 
   return (
-    <LazyMotion features={domAnimation}>
       <AnimatePresence mode="wait">
         {!isActivated ? (
-          <m.div
+          <motion.div
             key="RS"
             initial="initial"
             animate="animate"
@@ -28,9 +27,9 @@ export default function Badge({ isActivated }: BadgeProps) {
             variants={fadeVariants}
           >
             <RSBadge />
-          </m.div>
+          </motion.div>
         ) : (
-          <m.div
+          <motion.div
             key="DS"
             initial="initial"
             animate="animate"
@@ -38,9 +37,8 @@ export default function Badge({ isActivated }: BadgeProps) {
             variants={fadeVariants}
           >
             <DSBadge />
-          </m.div>
+          </motion.div>
         )}
       </AnimatePresence>
-    </LazyMotion>
   );
 }

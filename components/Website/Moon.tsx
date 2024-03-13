@@ -1,5 +1,5 @@
 // components/Moon.tsx
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 import React, { useState, useEffect } from "react";
 
 interface MoonProps {
@@ -21,7 +21,7 @@ function Moon({ isActivated }: MoonProps) {
   };
 
   return (
-    <m.div
+    <motion.div
       animate={moonControls}
       initial={{ x: "60vw" }}
       transition={{ duration: 4, ease: "easeOut" }}
@@ -31,7 +31,7 @@ function Moon({ isActivated }: MoonProps) {
       <div className="crater large"></div>
       <div className="crater xsmall"></div>
       <div className="crater xlarge"></div>
-    </m.div>
+    </motion.div>
 
   );
 }

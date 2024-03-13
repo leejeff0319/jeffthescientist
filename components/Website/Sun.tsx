@@ -1,5 +1,5 @@
 // components/Sun.tsx
-import { m} from 'framer-motion';
+import { motion } from 'framer-motion';
 import React, { useState, useEffect } from "react";
 
 interface SunProps {
@@ -23,7 +23,7 @@ function Sun(props: SunProps) {
   };
 
   return (
-      <m.div 
+      <motion.div 
           initial={{ backgroundColor: "#FEF08A" }}
           animate={sunControls}
           transition={{ duration: 4, ease: "easeOut" }}
