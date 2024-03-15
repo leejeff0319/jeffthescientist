@@ -204,7 +204,7 @@ function DSResume() {
                     <button
                         key={tab}
                         onClick={() => setActiveTab(tab)}
-                        className={`mr-4 pb-2 ${activeTab === tab ? 'border-b-2 black text-white font-semibold' : 'text-white hover:text-blue-200'}`}
+                        className={`mr-4 pb-2 ${activeTab === tab ? 'border-b-2 black text-white font-semibold' : 'text-white hover:text-gray-300'}`}
                     >
                         {tab.charAt(0).toUpperCase() + tab.slice(1)}
                     </button>

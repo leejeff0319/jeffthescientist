@@ -117,6 +117,7 @@ const TensorFlowComponent: React.FC<TensorFlowComponentProps> = ({ imageData }) 
                                 ))}
                             </div>
                         </div>
+                        <h3 className="mx-0 text-lg mt-2">If it's not working, please write bigger.</h3>
                     </div>
 
                 </div>

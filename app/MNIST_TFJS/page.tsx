@@ -41,7 +41,7 @@ class MNIST_TFJS extends Component<{}, State> {
             <div className='flex justify-center'>
               <DrawableCanvas onNewImage={this.handleNewImage} />
             </div>
-
+            
           </div>
 
           {/* TensorFlow Prediction Column */}
