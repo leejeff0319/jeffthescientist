@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from "framer-motion";
 import Sun from '../components/Website/Sun';
 import Moon from '../components/Website//Moon'
 import Night from '../components/Website//Night';
@@ -65,12 +65,13 @@ export default function Home() {
         </div>
 
         {/* Page loader */}
+        <AnimatePresence mode="wait">
         {currentPage === "home" && (
           <motion.div
             key="homePage"
             variants={fadeVariants}
-            initial="hidden"
-            animate="visible"
+            initial="initial"
+            animate="animate"
             exit="exit"
           >
             <HomePage resumeType={resumeType} showRS={!isActivated} />
@@ -81,8 +82,8 @@ export default function Home() {
           <motion.div
             key="aboutPage"
             variants={fadeVariants}
-            initial="hidden"
-            animate="visible"
+            initial="initial"
+            animate="animate"
             exit="exit"
           >
             <AboutPage isDarkTheme={isActivated} />
@@ -93,8 +94,8 @@ export default function Home() {
           <motion.div
             key="projectsPage"
             variants={fadeVariants}
-            initial="hidden"
-            animate="visible"
+            initial="initial"
+            animate="animate"
             exit="exit"
           >
             <ProjectsPage isDarkTheme={isActivated} />
@@ -105,8 +106,8 @@ export default function Home() {
           <motion.div
             key="projectsPage"
             variants={fadeVariants}
-            initial="hidden"
-            animate="visible"
+            initial="initial"
+            animate="animate"
             exit="exit"
           >
             <NotesPage isDarkTheme={isActivated} />
@@ -117,14 +118,14 @@ export default function Home() {
           <motion.div
             key="certsPage"
             variants={fadeVariants}
-            initial="hidden"
-            animate="visible"
+            initial="initial"
+            animate="animate"
             exit="exit"
           >
             <CertsPage isDarkTheme={isActivated} />
           </motion.div>
         )}
-
+      </AnimatePresence>
         {/* Feedback Footer */}
         <ContactFooter isDark={isActivated} />
 

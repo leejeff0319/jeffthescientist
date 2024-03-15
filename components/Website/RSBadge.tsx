@@ -5,11 +5,11 @@ const RSBadge: React.FC = () => {
     return (
         <div>
             {/*Profile Pic*/}
-            <div className="absolute top-0 left-0 z-10">
+            <div className="absolute top-0 left-2 z-10">
                 <Image
-                    src="/profile.jpg"
-                    width="60"
-                    height="50"
+                    src="/headshot.jpg"
+                    width="55"
+                    height="55"
                     alt="Profile Picture"
                     className="mt-5 ml-4" />
             </div>
