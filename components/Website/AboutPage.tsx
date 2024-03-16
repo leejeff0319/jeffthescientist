@@ -26,8 +26,8 @@ const AboutPage: React.FC<AboutPageProps> = ({ isDarkTheme }) => {
                 <div style ={{background:`${blanketColor}`}}className={`m-2 rounded-md p-2`}>
                     <p className={`text-left mx-3 ${textColor} text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl`}>
                         Hello everyone, welcome to my website! My name is Jeff, and I am currently working as a Research Assistant at Boston Children&#39;s Hospital
-                        under Dr. Zhongjie Fu in the Ophthalmology department. I graduated from Vanderbilt University with B.S. in Chemistry as a part of my pre-medical track. 
-                        I genuinely loved and enjoyed every moment I spent at Vanderbilt, and still cannot believe that I have graduated and started my career already. I espeically
+                        under Dr. Zhongjie Fu and Dr. Lois E Smith in the Ophthalmology department. I graduated from Vanderbilt University with B.S. in Chemistry as a part of my pre-medical track. 
+                        I genuinely loved and enjoyed every moment I spent at Vanderbilt, and still cannot believe that I have graduated and started my career already. I
                         resonate strongly with their <strong>Dare to Grow</strong> message, and I have been practicing it ever since my time at Vanderbilt University.
                         One prime example would be when I discovered a new passion for data science and machine learning a couple months ago after undergoing some pivotal life events.
                         <br />

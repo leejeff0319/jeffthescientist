@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 // import { GiSnakeTotem }from '../assets/images/GiSnakeTotem.png';
 import { TbSortAscendingNumbers } from 'react-icons/tb';
+import { SiTensorflow } from 'react-icons/si';
+import { MdScience } from "react-icons/md";
+import { TbBrandNextjs } from 'react-icons/tb';
 
 type ProjectsProps = {
     isDarkTheme: boolean;
@@ -144,17 +147,38 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkTheme }) => {
             <div className='project-body center-content'>
                 <div id="cards">
                     <Link
+                        href="https://github.com/leejeff0319/jeffthescientist"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="card">
+                        <div className='card-content'>
+                            <div className="card-image">
+                                <i className=""> <MdScience/></i>
+                            </div>
+                            <div className="card-info-wrapper">
+                                <div className="card-info">
+                                    <i className=""> <TbBrandNextjs/></i>
+                                    <div className="card-info-title" >
+                                        <h3>Jeff The Scientist</h3>
+                                        <h4>Github repository of the journey. I documented the processes I went through during the 3 month period.</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </Link>
+
+                    <Link
                         href="/MNIST_TFJS"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="card">
                         <div className='card-content'>
                             <div className="card-image">
-                                <i className=""> <TbSortAscendingNumbers /></i>
+                                <i className=""> <TbSortAscendingNumbers/></i>
                             </div>
                             <div className="card-info-wrapper">
                                 <div className="card-info">
-                                    <i className=""> <TbSortAscendingNumbers /></i>
+                                    <i className=""> <SiTensorflow/></i>
                                     <div className="card-info-title" >
                                         <h3>MNIST_TFJS</h3>
                                         <h4>Handwritten Digit Recognizer built using CNN model! Will it recognize your handwriting? Let&apos;s find out!
@@ -164,9 +188,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkTheme }) => {
                             </div>
                         </div>
                     </Link>
-                    <div className='card'>
-                        <div className='card-content'></div>
-                    </div>
+                    
                     <div className='card'>
                         <div className='card-content'></div>
                     </div>

@@ -22,7 +22,7 @@ function Resume() {
                 </div>
                 <ul className="list-disc pl-5 mt-1 text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">
                     <li>Co-founded <a href="https://www.cupps.org/" target="_blank" rel="noopener noreferrer" className="text-black hover:underline"><strong>CUPPS.org</strong></a></li>
-                    <li>Co-directed the <strong>“I&#39;m Good, How Are You”</strong> Podcast</li>
+                    <li>Co-directed the <strong>“I&#39;m Good, How Are You?”</strong> Podcast</li>
                     <li>Elected <strong>Pledge Class President </strong>of Alpha Phi Omega</li>
                     <li><strong>3.78 GPA</strong> during the final 3 Semesters while taking 18 credit hours and working 20+ hours/week</li>
                 </ul>

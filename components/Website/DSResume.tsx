@@ -10,19 +10,18 @@ import {
 import { BiLogoTailwindCss,
         BiGitBranch,
         BiLogoTypescript } from 'react-icons/bi';
-import { TbBrandNextjs,
-        } from 'react-icons/tb';
+import { TbBrandNextjs} from 'react-icons/tb';
 import { DiNodejsSmall } from 'react-icons/di';
 import {
     SiJest,
     SiRstudio,
     SiTensorflow,
     SiPytorch,
-    SiMicrosoftexcel,
     SiTableau,
     SiJupyter
 } from 'react-icons/si';
-import { FaPython } from 'react-icons/fa';
+import { FaPython,
+         FaAws } from 'react-icons/fa';
 import { PiFileSql } from 'react-icons/pi';
 import { ImStatsDots } from 'react-icons/im';
 import Image from 'next/image';
@@ -182,8 +181,8 @@ function DSResume() {
                                 Jest
                             </div>
                             <div className="flex flex-col items-center text-xs md:text-sm lg:text-base">
-                                <SiMicrosoftexcel size={iconsSize} className="icon glow-icon-on-hover"  />
-                                Excel
+                                <FaAws size={iconsSize} className="icon glow-icon-on-hover"  />
+                                AWS
                             </div>
                         </div>
                     </div>
@@ -193,7 +192,40 @@ function DSResume() {
 
         ),
         interests: 'Under Construction',
-        credentials: 'Under Construction'
+        credentials: (
+            <div>
+                <div className="flex justify-between mb-2 text-xs sm:text-base md:lg lg:text-lg 2xl:text-2xl">
+                    <span className="text-md"><strong>Google Data Analytics</strong></span>
+                    <span className="text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">June 2023</span>
+                </div>
+
+                <div className="flex justify-between mb-2 text-xs sm:text-base md:lg lg:text-lg 2xl:text-2xl">
+                    <span className="text-md"><strong>Python for Everybody Specialization</strong></span>
+                    <span className="text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">August 2023</span>
+                </div>
+
+                <div className="flex justify-between mb-2 text-xs sm:text-base md:lg lg:text-lg 2xl:text-2xl">
+                    <span className="text-md"><strong>Google Advanced Data Analytics</strong></span>
+                    <span className="text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">September 2023</span>
+                </div>  
+
+                <div className="flex justify-between mb-2 text-xs sm:text-base md:lg lg:text-lg 2xl:text-2xl">
+                    <span className="text-md"><strong>Meta Front-end Developer</strong></span>
+                    <span className="text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">December 2023</span>
+                </div>
+
+                <div className="flex justify-between mb-2 text-xs sm:text-base md:lg lg:text-lg 2xl:text-2xl">
+                    <span className="text-md"><strong>Meta Back-end Developer</strong></span>
+                    <span className="text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">December 2023</span>
+                </div>
+
+                <div className="flex justify-between mb-2 text-xs sm:text-base md:lg lg:text-lg 2xl:text-2xl">
+                    <span className="text-md"><strong>TensorFlow Developer Certificate</strong></span>
+                    <span className="text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">January 2024</span>
+                </div>
+            </div>
+        )
+
     };
 
     return (
