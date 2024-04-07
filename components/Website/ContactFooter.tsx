@@ -8,7 +8,6 @@ interface ContactFooterProps {
 }
 
 const ContactFooter: React.FC<ContactFooterProps> = ({ isDark }) => {
-    
     return (
         <div className={`container mx-auto py-10 `}>
             <div className="flex flex-wrap -mx-4 justify-center">
