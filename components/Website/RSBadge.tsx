@@ -21,7 +21,7 @@ const RSBadge: React.FC = () => {
                     Jeff Youngjae Lee
                 </p>
                 <p className="relative justify-left left-16 text-xs mt-1">
-                    Research Assistant I
+                    Research Assistant
                 </p>
                 <p className="relative justify-left left-16 text-xs">
                     Ophthalmology

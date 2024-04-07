@@ -14,6 +14,8 @@ import ProjectsPage from '@/components/Website/ProjectsPage';
 import AboutPage from '@/components/Website/AboutPage';
 import NotesPage from '@/components/Website/NotesPage';
 import Button from '@/components/Website/Button';
+import { Toaster } from 'react-hot-toast';
+
 
 
 export default function Home() {
@@ -128,6 +130,8 @@ export default function Home() {
       </AnimatePresence>
         {/* Feedback Footer */}
         <ContactFooter isDark={isActivated} />
+
+        <Toaster position="top-right" />
 
         {/* Animation Button */}
         <Button isActivated={isActivated} onToggle={() => setIsActivated(prevState => !prevState)} />
