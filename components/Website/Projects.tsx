@@ -5,6 +5,8 @@ import { TbSortAscendingNumbers } from 'react-icons/tb';
 import { SiTensorflow } from 'react-icons/si';
 import { MdScience } from "react-icons/md";
 import { TbBrandNextjs } from 'react-icons/tb';
+import { CiBowlNoodles } from "react-icons/ci";
+import { VscGraphLine } from "react-icons/vsc";
 
 type ProjectsProps = {
     isDarkTheme: boolean;
@@ -189,9 +191,27 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkTheme }) => {
                         </div>
                     </Link>
                     
-                    <div className='card'>
-                        <div className='card-content'></div>
-                    </div>
+                    <Link
+                        href="https://github.com/leejeff0319/Restaurant_Promotional_Event"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="card">
+                        <div className='card-content'>
+                            <div className="card-image">
+                                <i className=""> <CiBowlNoodles/></i>
+                            </div>
+                            <div className="card-info-wrapper">
+                                <div className="card-info">
+                                    <i className=""> <VscGraphLine/></i>
+                                    <div className="card-info-title" >
+                                        <h3>Restaurant Promotion</h3>
+                                        <h4>Brief data analytics project with my brother. We proposed an idea and performed simple data analytics to measure its impact.</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </Link>
+
                     <div className='card'>
                         <div className='card-content'></div>
                     </div>

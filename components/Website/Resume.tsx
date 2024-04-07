@@ -14,7 +14,7 @@ function Resume() {
                             width={50}
                             height={50}
                             alt="Vanderbilt University Logo" className="w-12 h-8" />
-                        <span><strong>Vanderbilt University</strong>- B.S. Chemistry</span>
+                        <span><strong>Vanderbilt University</strong>- B.A. Chemistry</span>
                     </div>
                     <div className="text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">
                         <span>GPA: 3.53</span>
