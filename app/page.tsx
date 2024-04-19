@@ -24,6 +24,7 @@ export default function Home() {
   const resumeType = isActivated ? "dataScience" : "research";
   const buttonClass = isActivated ? 'night-btn' : 'day-btn';
   const [currentPage, setCurrentPage] = useState("projects");
+  const [showRS, setShowRS] = useState(true); 
 
   const fadeVariants = {
     initial: { opacity: 0 },
@@ -131,15 +132,40 @@ export default function Home() {
             <CertsPage isDarkTheme={isActivated} />
           </motion.div>
         )}
-      </AnimatePresence>
-
-      {/* Feedback Footer */}
-      <ContactFooter isDark={isActivated} />
-
-      <Toaster position="top-right" />
+        </AnimatePresence>
       
-      {/* Animation Button */}
-      <Button isActivated={isActivated} onToggle={() => setIsActivated(prevState => !prevState)} />
+        {/* Hours */}
+        <AnimatePresence mode='wait'>
+                {showRS ? (
+                    <motion.div
+                        key="RSHours"
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        variants={fadeVariants}
+                    >
+                        <RSHours />
+                    </motion.div>
+                ) : (
+                    <motion.div
+                        key="DSHours"
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        variants={fadeVariants}
+                    >
+                        <DSHours />
+                    </motion.div>
+                )}
+          </AnimatePresence>
+
+        {/* Feedback Footer */}
+        <ContactFooter isDark={isActivated} />
+
+        <Toaster position="top-right" />
+        
+        {/* Animation Button */}
+        <Button isActivated={isActivated} onToggle={() => setIsActivated(prevState => !prevState)} />
     </main>
 
 

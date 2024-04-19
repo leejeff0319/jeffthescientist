@@ -7,6 +7,7 @@ import { MdScience } from "react-icons/md";
 import { TbBrandNextjs } from 'react-icons/tb';
 import { CiBowlNoodles } from "react-icons/ci";
 import { VscGraphLine } from "react-icons/vsc";
+import { TbHandClick } from "react-icons/tb";
 
 type ProjectsProps = {
     isDarkTheme: boolean;
@@ -154,6 +155,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkTheme }) => {
                         rel="noopener noreferrer"
                         className="card">
                         <div className='card-content'>
+                            <span><TbHandClick size={25}/></span>
                             <div className="card-image">
                                 <i className=""> <MdScience/></i>
                             </div>
@@ -175,6 +177,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkTheme }) => {
                         rel="noopener noreferrer"
                         className="card">
                         <div className='card-content'>
+                            <span><TbHandClick size={25}/></span>
                             <div className="card-image">
                                 <i className=""> <TbSortAscendingNumbers/></i>
                             </div>
@@ -197,6 +200,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkTheme }) => {
                         rel="noopener noreferrer"
                         className="card">
                         <div className='card-content'>
+                            <span><TbHandClick size={25}/></span>
                             <div className="card-image">
                                 <i className=""> <CiBowlNoodles/></i>
                             </div>

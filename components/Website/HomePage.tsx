@@ -60,7 +60,7 @@ const HomePage: React.FC<HomePageProps> = ({ resumeType, showRS }) => {
             {/* <div id="animationSlide"><AnimationDoc isDarkTheme={!showRS}/></div> */}
 
             {/* Hours */}
-            <AnimatePresence mode='wait'>
+            {/* <AnimatePresence mode='wait'>
                 {showRS ? (
                     <motion.div
                         key="RSHours"
@@ -82,7 +82,7 @@ const HomePage: React.FC<HomePageProps> = ({ resumeType, showRS }) => {
                         <DSHours />
                     </motion.div>
                 )}
-            </AnimatePresence>
+            </AnimatePresence> */}
 
         </>
     );
