@@ -1,5 +1,6 @@
 import React from 'react'
-
+  {/* <div className=" grid grid-cols-12 gap-4 mt-10">
+                <div className="col-start-4 col-end-11"></div> */}
 const DSNotes: React.FC = () => {
   return (
     <div className='grid grid-cols-2 gap-4'>

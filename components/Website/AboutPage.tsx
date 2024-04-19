@@ -12,9 +12,8 @@ const AboutPage: React.FC<AboutPageProps> = ({ isDarkTheme }) => {
     const blanketColor = isDarkTheme ? '#3E4143' : 'rgb(191 219 254)';
 
     return (
-        <div className="flex ml-6 mr-1">
-            <div className="flex-none w-1/5"></div>
-            <div style={{ backgroundColor: bgColor }} className={`flex-grow w-4/5 rounded-md mt-10`}>
+        <div className=" grid grid-cols-12 gap-4 mt-10">
+            <div style={{ backgroundColor: bgColor }} className={`col-start-4 col-end-11 rounded-md `}>
                 <div className={`center-content text-3xl sm:3xl md:3xl lg:text-4xl 2xl:text-5xl ${textColor}`}><strong>About Me</strong></div>
 
                 {/* Add Pictures */}

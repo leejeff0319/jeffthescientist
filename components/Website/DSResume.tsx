@@ -5,7 +5,8 @@ import {
     RiCss3Fill,
     RiJavascriptFill,
     RiHtml5Fill,
-    RiBootstrapFill
+    RiBootstrapFill,
+    RiGithubFill
 } from 'react-icons/ri';
 import { BiLogoTailwindCss,
         BiGitBranch,
@@ -71,6 +72,31 @@ function DSResume() {
                     <li>Co-directed the <strong>“I’m Good, How Are You”</strong> Podcast</li>
                     <li>Elected <strong>Pledge Class President </strong>of Alpha Phi Omega</li>
                     <li><strong>3.78 GPA</strong> during the final 3 Semesters while taking 18 credit hours and working 20+ hours/week</li>
+                </ul>
+            </div>
+        ),
+        projects: (
+            <div>
+                <div className="flex justify-between mb-2 text-xs sm:text-base md:lg lg:text-lg 2xl:text-2xl">
+                    <span className="text-md"><strong>Jeff The Scientist</strong> | <RiGithubFill size={30} /></span> 
+                    <span className="text-xxs sm:text-sm md:text-base lg:text-base xl:text-lg">Sep 2023 - Current</span>
+                </div>
+                <ul className="list-disc pl-5 mb-4 text-xxs sm:text-sm md:text-base lg:text-lg xl:text-lg">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+                <div className="flex justify-between mb-2 text-xs sm:text-base md:lg lg:text-lg 2xl:text-2xl">
+                    <span className="text-md"><strong>Restaurant Promotional Event</strong> | <RiGithubFill size={30} /></span> 
+                    <span className="text-xxs sm:text-sm md:text-base lg:text-base xl:text-lg">Sep 2023 - Current</span>
+                </div>
+                <ul className="list-disc pl-5 mb-4 text-xxs sm:text-sm md:text-base lg:text-lg xl:text-lg">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
                 </ul>
             </div>
         ),
@@ -191,7 +217,6 @@ function DSResume() {
   
 
         ),
-        interests: 'Under Construction',
         credentials: (
             <div>
                 <div className="flex justify-between mb-2 text-xs sm:text-base md:lg lg:text-lg 2xl:text-2xl">
@@ -232,7 +257,7 @@ function DSResume() {
         <div className="bg-black text-white p-6 rounded-lg shadow-lg">
             {/* Tabs */}
             <div className="flex mb-4 border-b justify-between text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">
-                {['education', 'skills', 'interests', 'credentials'].map(tab => (
+                {['education', 'projects', 'skills', 'credentials'].map(tab => (
                     <button
                         key={tab}
                         onClick={() => setActiveTab(tab)}

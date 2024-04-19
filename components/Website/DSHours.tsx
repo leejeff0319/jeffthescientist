@@ -33,7 +33,7 @@ const DSHours = () => {
                                 </div>
                             </div>
                             <div className="w-7/12 text-left px-3 py-3">
-                                <h1 className="text-blue-500 font-bold text-4xl">0</h1>
+                                <h1 className="text-blue-500 font-bold text-4xl">3</h1>
                                 <p className="text-gray-200 mb-1 text-xs">Projects Finished</p>
                             </div>
                         </div>
@@ -48,7 +48,7 @@ const DSHours = () => {
                                 </div>
                             </div>
                             <div className="w-7/12 text-left px-3 py-3">
-                                <h1 className="text-blue-500 font-bold text-4xl">519</h1>
+                                <h1 className="text-blue-500 font-bold text-4xl">600+</h1>
                                 <p className="text-gray-200 mb-1 text-xs">Coffees Consumed</p>
                             </div>
                         </div>
@@ -63,7 +63,7 @@ const DSHours = () => {
                                 </div>
                             </div>
                             <div className="w-7/12 text-left px-3 py-3">
-                                <h1 className="text-blue-500 font-bold text-4xl">121</h1>
+                                <h1 className="text-blue-500 font-bold text-4xl">154</h1>
                                 <p className="text-gray-200 mb-1 text-xs">Nights Spent Up</p>
                             </div>
                         </div>

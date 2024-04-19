@@ -19,7 +19,7 @@ const RSHours = () => {
                                 </div>
                             </div>
                             <div className="w-7/12 text-left px-3 py-3">
-                                <h1 className="text-blue-400 font-bold text-4xl">1256</h1>
+                                <h1 className="text-blue-400 font-bold text-4xl">2000+</h1>
                                 <p className="text-black mb-1 text-xs">Research Hours</p>
                             </div>
                         </div>
@@ -34,7 +34,7 @@ const RSHours = () => {
                                 </div>
                             </div>
                             <div className="w-7/12 text-left px-3 py-3">
-                                <h1 className="text-blue-400 font-bold text-4xl">230</h1>
+                                <h1 className="text-blue-400 font-bold text-4xl">250</h1>
                                 <p className="text-black mb-1 text-xs">Clinical Hours</p>
                             </div>
                         </div>
@@ -49,8 +49,8 @@ const RSHours = () => {
                                 </div>
                             </div>
                             <div className="w-7/12 text-left px-3 py-3">
-                                <h1 className="text-blue-400 font-bold text-4xl">519</h1>
-                                <p className="text-black mb-1 text-xs">Coffees Consumed</p>
+                                <h1 className="text-blue-400 font-bold text-4xl">600+</h1>
+                                <p className="text-black mb-1 text-xs">Coffee Consumed</p>
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ const RSHours = () => {
                                 </div>
                             </div>
                             <div className="w-7/12 text-left px-3 py-3">
-                                <h1 className="text-blue-400 font-bold text-4xl">121</h1>
+                                <h1 className="text-blue-400 font-bold text-4xl">154</h1>
                                 <p className="text-black mb-1 text-xs">Nights Spent Up</p>
                             </div>
                         </div>

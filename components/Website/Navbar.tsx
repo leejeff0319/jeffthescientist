@@ -16,13 +16,13 @@ function Navbar({ isActivated , onPageChange }: NavbarProps & { onPageChange: (p
       >
         <ul className="flex justify-center space-x-4 sm:space-x-10 md:space-x-20 lg:space-x-40 xl:space-x-52">
           <li>
-            <a onClick={() => onPageChange('home')} className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white hover:text-blue-500 cursor-pointer">Home</a>
+            <a onClick={() => onPageChange('projects')} className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white hover:text-blue-500 cursor-pointer">Projects</a>
           </li>
           <li>
             <a onClick={() => onPageChange('about')} className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white hover:text-blue-500 cursor-pointer">About Me</a>
           </li>
           <li>
-            <a onClick={() => onPageChange('projects')} className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white hover:text-blue-500 cursor-pointer">Projects</a>
+            <a onClick={() => onPageChange('home')} className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white hover:text-blue-500 cursor-pointer">Resume</a>
           </li>
           <li>
             <a onClick={() => onPageChange('notes')} className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white hover:text-blue-500 cursor-pointer">Notes</a>

@@ -15,14 +15,15 @@ import AboutPage from '@/components/Website/AboutPage';
 import NotesPage from '@/components/Website/NotesPage';
 import Button from '@/components/Website/Button';
 import { Toaster } from 'react-hot-toast';
-
+import RSHours from '@/components/Website/RSHours';
+import DSHours from '@/components/Website/DSHours';
 
 
 export default function Home() {
   const [isActivated, setIsActivated] = useState(false);
   const resumeType = isActivated ? "dataScience" : "research";
   const buttonClass = isActivated ? 'night-btn' : 'day-btn';
-  const [currentPage, setCurrentPage] = useState("home");
+  const [currentPage, setCurrentPage] = useState("projects");
 
   const fadeVariants = {
     initial: { opacity: 0 },
@@ -38,9 +39,7 @@ export default function Home() {
     <main className={isActivated ? "dark-theme" : "light-theme"}>
         <div className='role-container absolute z-50'>
           {/* Scientist Animation */}
-
           <Scientist isActivated={isActivated} />
-
         </div>
 
         {/* Render the Sun and Night components */}
@@ -50,22 +49,27 @@ export default function Home() {
 
         {/* Navbar */}
         <Navbar isActivated={isActivated} onPageChange={handlePageChange} />
+        <div className="absolute top-2/5 left-0 w-1/4 h-full">
+          {/* Badge Container */}
+          <div className="badge-container absolute top-100">
+            {/* Badge Animations */}
+            <Badges isActivated={isActivated} />
 
-        {/* Badge Container */}
-        <div className="badge-container absolute top-100">
-          {/* Badge Animations */}
-          <Badges isActivated={isActivated} />
-
-          {/* "Download CV" Button */}
-          <div className='relative top-5 ml-16'>
-            <a href={isActivated ? "/path-to-night-cv.pdf" : "/path-to-day-cv.pdf"}
-              download
-              className={` ${buttonClass}`}>
-              Download CV
-            </a>
+            {/* "Download CV" Button */}
+            <div className='relative top-5 ml-16'>
+              <a href={isActivated ? "/path-to-night-cv.pdf" : "/path-to-day-cv.pdf"}
+                download
+                className={` ${buttonClass}`}>
+                Download CV
+              </a>
+            </div>
+          </div>
+          <div className='relative top-56 mx-6'>
+            {/* Feedback Footer */}
+            {/* <ContactFooter isDark={isActivated} /> */}
           </div>
         </div>
-
+        
         {/* Page loader */}
         <AnimatePresence mode="wait">
         {currentPage === "home" && (
@@ -128,13 +132,14 @@ export default function Home() {
           </motion.div>
         )}
       </AnimatePresence>
-        {/* Feedback Footer */}
-        <ContactFooter isDark={isActivated} />
 
-        <Toaster position="top-right" />
+      {/* Feedback Footer */}
+      <ContactFooter isDark={isActivated} />
 
-        {/* Animation Button */}
-        <Button isActivated={isActivated} onToggle={() => setIsActivated(prevState => !prevState)} />
+      <Toaster position="top-right" />
+      
+      {/* Animation Button */}
+      <Button isActivated={isActivated} onToggle={() => setIsActivated(prevState => !prevState)} />
     </main>
 
 

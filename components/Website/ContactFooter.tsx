@@ -10,7 +10,7 @@ interface ContactFooterProps {
 const ContactFooter: React.FC<ContactFooterProps> = ({ isDark }) => {
     return (
         <div className={`container mx-auto py-10 `}>
-            <div className="flex flex-wrap -mx-4 justify-center">
+            <div className="flex flex-wrap  justify-center">
                 <div className="w-full lg:w-2/3 px-4">
                     <div style = {{background:`${isDark ? '#2C2F31' : 'white'}`}}className={`p-6 rounded shadow-2xl`}>
                         <h4 className={`text-xl font-bold mb-1 ${isDark ? 'text-white' : 'text-black'}`}>Do you have any recommendations/feedbacks?</h4>

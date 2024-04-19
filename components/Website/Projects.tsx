@@ -146,7 +146,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkTheme }) => {
 
     return (
         <div>
-            <div className='project-body center-content'>
+            <div className=' project-body '>
                 <div id="cards">
                     <Link
                         href="https://github.com/leejeff0319/jeffthescientist"

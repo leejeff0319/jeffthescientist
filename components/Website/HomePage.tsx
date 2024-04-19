@@ -22,8 +22,8 @@ const HomePage: React.FC<HomePageProps> = ({ resumeType, showRS }) => {
     return (
         <>
             {/* Resume */}
-            <div className=" grid grid-cols-12 gap-4 mt-10 ">
-                <div className="col-start-4 col-end-12">
+            <div className=" grid grid-cols-12 gap-4 mt-10">
+                <div className="col-start-4 col-end-11">
 
                     {/* Resume Animation */}
                     <AnimatePresence mode='wait'>
@@ -53,11 +53,11 @@ const HomePage: React.FC<HomePageProps> = ({ resumeType, showRS }) => {
             </div>
 
             {/* Website Documentation */}
-            <div id="websiteSlide"><WebsiteDoc isDarkTheme={!showRS}/></div>
+            {/* <div id="websiteSlide"><WebsiteDoc isDarkTheme={!showRS}/></div> */}
             
 
             {/* Animation Documentation */}
-            <div id="animationSlide"><AnimationDoc isDarkTheme={!showRS}/></div>
+            {/* <div id="animationSlide"><AnimationDoc isDarkTheme={!showRS}/></div> */}
 
             {/* Hours */}
             <AnimatePresence mode='wait'>
