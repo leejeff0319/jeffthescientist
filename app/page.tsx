@@ -136,28 +136,28 @@ export default function Home() {
       
         {/* Hours */}
         <AnimatePresence mode='wait'>
-                {showRS ? (
-                    <motion.div
-                        key="RSHours"
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                        variants={fadeVariants}
-                    >
-                        <RSHours />
-                    </motion.div>
-                ) : (
-                    <motion.div
-                        key="DSHours"
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                        variants={fadeVariants}
-                    >
-                        <DSHours />
-                    </motion.div>
-                )}
-          </AnimatePresence>
+          {resumeType === "research" ? (
+            <motion.div
+              key="RSHours"
+              variants={fadeVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              <RSHours />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="DSHours"
+              variants={fadeVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              <DSHours />
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Feedback Footer */}
         <ContactFooter isDark={isActivated} />
