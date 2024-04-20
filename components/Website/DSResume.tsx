@@ -56,20 +56,21 @@ function DSResume() {
             <div>
                 <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2 text-xxs sm:text-md md:text-xl lg:text-xl 2xl:text-2xl">
-                        <Image 
-                        src="/Gvandy.png"
-                        width={50}
-                        height={50} 
-                        alt="Vanderbilt University Logo" className="w-12 h-8" />
-                        <span><strong>Vanderbilt University</strong>- B.S. Chemistry</span>
+                        <Image
+                            src="/Gvandy.png"
+                            width={50}
+                            height={50}
+                            alt="Vanderbilt University Logo" className="w-12 h-8" />
+                        <span><strong>Vanderbilt University</strong> - B.A. Chemistry</span>
                     </div>
                     <div className="text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">
                         <span>GPA: 3.53</span>
                     </div>
                 </div>
-                <ul className="list-disc pl-5 mt-1 text-xxs sm:text-sm md:text-base lg:text-lg xl:text-xl">
-                <li>Co-founded <a href="https://www.cupps.org/" target="_blank" rel="noopener noreferrer" className="text-white hover:underline"><strong>CUPPS.org</strong></a></li>
-                    <li>Co-directed the <strong>“I’m Good, How Are You”</strong> Podcast</li>
+                <ul className="list-disc pl-5 mt-1 text-xxs sm:text-sm md:text-base lg:text-lg xl:text-lg">
+                    <li>Co-founded <a href="https://www.cupps.org/" target="_blank" rel="noopener noreferrer" className="text-white hover:underline"><strong>CUPPS.org</strong></a>, 
+                    an organization dedicated to helping pre-med high school students from <strong>underserved communities</strong></li>
+                    <li>Co-directed the <strong>“I&#39;m Good, How Are You?”</strong> Podcast, in hopes of <strong>raising awareness for mental health</strong></li>
                     <li>Elected <strong>Pledge Class President </strong>of Alpha Phi Omega</li>
                     <li><strong>3.78 GPA</strong> during the final 3 Semesters while taking 18 credit hours and working 20+ hours/week</li>
                 </ul>

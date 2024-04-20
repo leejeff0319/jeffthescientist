@@ -23,8 +23,7 @@ export default function Home() {
   const [isActivated, setIsActivated] = useState(false);
   const resumeType = isActivated ? "dataScience" : "research";
   const buttonClass = isActivated ? 'night-btn' : 'day-btn';
-  const [currentPage, setCurrentPage] = useState("projects");
-  const [showRS, setShowRS] = useState(true); 
+  const [currentPage, setCurrentPage] = useState("home");
 
   const fadeVariants = {
     initial: { opacity: 0 },
