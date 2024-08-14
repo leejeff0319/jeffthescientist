@@ -57,10 +57,10 @@ export default function Home() {
 
             {/* "Download CV" Button */}
             <div className='relative top-5 ml-16'>
-              <a href={isActivated ? "/path-to-night-cv.pdf" : "/path-to-day-cv.pdf"}
+              <a href={isActivated ? "/JeffLee_Resume.pdf" : "/JeffLee_Resume.pdf"}
                 download
                 className={` ${buttonClass}`}>
-                Download CV
+                Download Resume
               </a>
             </div>
           </div>
